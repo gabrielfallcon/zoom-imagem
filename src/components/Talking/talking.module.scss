@@ -1,0 +1,280 @@
+$bg-page: #0d1117;
+$bg-card: #111820;
+$bg-input: #1a2230;
+$bg-input-hover: #1f2a3a;
+$border-color: #2a3a4a;
+$border-focus: #5cff3a;
+
+$green-accent: #7fff3a;
+$green-dark: #4ccc20;
+$text-primary: #ffffff;
+$text-secondary: #8fa3b8;
+$text-muted: #506070;
+$label-color: #a0b4c8;
+
+$font-display: "DM Sans", "Segoe UI", sans-serif;
+$font-body: "DM Sans", "Segoe UI", sans-serif;
+
+@import "../../styles/mixins.scss";
+
+.contentTalking {
+  min-height: 100vh;
+  width: 100%;
+  background: #111022;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-body;
+  border-radius: 24px;
+  margin-bottom: 16px;
+
+  @include media("l") {
+    font-size: 16px;
+    padding: 100px;
+  }
+}
+
+.contentHeader {
+  width: 100%;
+
+  p {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: $text-muted;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    width: 100%;
+    max-width: 925px;
+    font-weight: 400;
+    font-size: 32px;
+    color: #fafafab2;
+    margin-bottom: 32px;
+
+    strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    @include media("l") {
+      font-size: 64px;
+      line-height: 75px;
+      margin-bottom: 64px;
+    }
+  }
+
+  @include media("l") {
+    padding: 00px 20px;
+  }
+}
+
+.contentCentral {
+  display: flex;
+
+  @include media("l") {
+    gap: 32px;
+  }
+}
+
+.image {
+  display: none;
+
+  @include media("l") {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    filter: grayscale(20%);
+  }
+}
+
+.imageWrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.contentForm {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  width: 100%;
+
+  p {
+    font-size: 16px;
+    line-height: 1.65;
+    align-items: start;
+    color: $text-secondary;
+  }
+
+  @include media("l") {
+    p {
+      font-size: 24px;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+}
+
+.fieldFull {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 12px;
+    font-weight: 500;
+    color: $label-color;
+    letter-spacing: 0.02em;
+  }
+
+  input {
+    padding: 11px 14px;
+    height: 48px;
+    border-radius: 8px;
+    background: #1a1d21;
+    border: 1px solid #363a3d;
+    outline: none;
+  }
+
+  textarea {
+    padding: 11px 14px;
+    min-height: 96px;
+    line-height: 1.55;
+    border-radius: 8px;
+    resize: none;
+    background: #1a1d21;
+    outline: none;
+    border: 1px solid #363a3d;
+  }
+}
+
+.fieldRow {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: space-between;
+
+  input {
+    padding: 11px 14px;
+    height: 48px;
+    border-radius: 8px;
+    background: #1a1d21;
+    border: 1px solid #363a3d;
+    outline: none;
+  }
+
+  label {
+    font-size: 12px;
+    font-weight: 500;
+    color: $label-color;
+    letter-spacing: 0.02em;
+  }
+
+  @include media("l") {
+    flex-direction: row;
+  }
+}
+
+.field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.btnSend {
+  width: 100%;
+  max-width: 327px;
+  margin: 0;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(360deg, #f8db57, #fed207);
+  color: #0c1132;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  @include media("l") {
+    max-width: 268px;
+    margin: none;
+  }
+}
+
+.selectWrapper {
+  position: relative;
+
+  .selectArrow {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $text-muted;
+    pointer-events: none;
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 12px;
+    font-weight: 500;
+    color: $label-color;
+    letter-spacing: 0.02em;
+  }
+
+  select {
+    padding: 11px 36px 11px 14px;
+    height: 48px;
+    appearance: none;
+    color: #575a5c;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    background: #1a1d21;
+    outline: none;
+    border: 1px solid #363a3d;
+
+    option {
+      background: #1a1d21;
+      color: $text-primary;
+    }
+  }
+}
+
+.submitRow {
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.contentFooter {
+  display: none;
+  align-items: center;
+  gap: 28px;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+
+  @include media ("l") {
+    display: flex;
+
+    padding: 20px 24px;
+    gap: 16px;
+  }
+}

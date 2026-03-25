@@ -1,0 +1,11 @@
+@use 'sass:map';
+@import './variables';
+@import './media-query.scss';
+
+@mixin media($breakpoint) {
+  $media: map.get($breakpoints, $breakpoint);
+
+  @media #{inspect($media)} {
+    @content;
+  }
+}

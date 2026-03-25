@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+$breakpoints: (
+  'xs': (
+    min-width: $ds-breakpoint-xs,
+  ),
+  's': (
+    min-width: $ds-breakpoint-s,
+  ),
+  'm': (
+    min-width: $ds-breakpoint-m,
+  ),
+  'l': (
+    min-width: $ds-breakpoint-l,
+  ),
+  'xl': (
+    min-width: $ds-breakpoint-xl,
+  ),
+  '2xl': (
+    min-width: $ds-breakpoint-2xl,
+  ),
+  'max-l': (
+    max-width: 899px,
+  ),
+)

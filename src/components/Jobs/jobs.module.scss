@@ -1,0 +1,238 @@
+@import "../../styles/mixins.scss";
+
+.contentTitle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+
+  @include media("l") {
+    margin-bottom: 100px;
+  }
+
+  span {
+    color: #c4c4c4;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+
+    @include media("l") {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+  }
+
+  h2 {
+    width: 100%;
+    max-width: 925px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    color: #fafafab2;
+    margin-bottom: 32px;
+
+    @include media("l") {
+      font-size: 64px;
+      margin-bottom: 100px;
+    }
+
+    strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+  }
+}
+
+.contentArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+
+  & > div {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 4px;
+  }
+}
+
+.contentServicesDesktop {
+  align-items: flex-start;
+  justify-content: center;
+  gap: 64px;
+  display: none;
+
+  @include media("l") {
+    display: flex;
+  }
+}
+
+.contentServicesMobile {
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+  gap: 64px;
+  position: relative;
+  padding: 32px 12px;
+
+  @include media("l") {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    left: -8px;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, #ee0874 0%, rgba(0, 255, 196, 0) 73.08%),
+      linear-gradient(180deg, #ee0874 0%, rgba(0, 255, 196, 0) 45.25%);
+    border-radius: 50px;
+  }
+}
+
+.contentPagination {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 32px;
+}
+
+.paginator {
+  width: 2px;
+  height: 350px;
+  background: linear-gradient(180deg, #EE0874 0%, rgba(0, 255, 196, 0) 73.08%),
+    linear-gradient(180deg, #EE0874 0%, rgba(0, 255, 196, 0) 45.25%);
+  border-radius: 50px;
+}
+
+.listServices {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  li {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 27.72px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    cursor: pointer;
+  }
+}
+
+.activeService {
+  color: #ffffff !important;
+  &::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    position: absolute;
+    left: -38px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+}
+
+.serviceItem {
+  width: 100%;
+  max-width: 875px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+
+  @include media("l") {
+    background-color: #242730;
+    padding: 48px 56px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 120%;
+    text-align: left;
+    color: #ffffff;
+
+    @include media("l") {
+      font-size: 34px;
+    }
+  }
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: left;
+    color: #c4c4c4;
+
+    @include media("l") {
+      font-size: 24px;
+    }
+  }
+
+  .listChecks {
+    display: none;
+    align-items: center;
+    gap: 32px;
+
+    @include media("l") {
+      display: flex;
+    }
+
+    .labelCheck {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17px;
+      letter-spacing: 0.1em;
+      text-align: center;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.serviceItem:hover {
+  @include media("l") {
+    background-color: #2e303a;
+    padding: 48px 56px;
+  }
+
+  h2 {
+    @include media("l") {
+      font-size: 35px;
+    }
+  }
+
+  p {
+      @include media("l") {
+        font-size: 25px;
+      }
+  }
+
+  .labelCheck {
+      font-size: 15px;
+    }
+}
