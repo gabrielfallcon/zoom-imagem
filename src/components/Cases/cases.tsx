@@ -95,17 +95,17 @@ const Cases = () => {
       <div className={styles.contentCopy}>
         <h3>
           {" "}
-          Pronto para o <strong>próximo passo?</strong>{" "}
+          Sua marca já deveria estar sendo vista.{" "}
         </h3>
 
         <div className={styles.copyDescription}>
           <p>
-            Depois de conferir nosso trabalho, imagine o que podemos criar junto
-            com você. <strong>Agende um horário agora mesmo.</strong>
+            Fale com uma equipe especializada em produção de <strong>OOH, PDV e projetos especiais </strong> 
+            e leve sua marca para os principais pontos de contato com o público.
           </p>
 
           <Button
-            label="Fazer agendamento"
+            label="Falar com a Zoom"
             size="lg"
             variant="tertiary"
             icon={<FiArrowDownRight size={24} color="#EE0874" />}
