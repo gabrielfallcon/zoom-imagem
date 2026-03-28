@@ -1,25 +1,35 @@
+import {
+  FiCalendar,
+  FiGrid,
+  FiMap,
+  FiMonitor,
+  FiNavigation,
+  FiPackage,
+  FiShoppingBag,
+} from "react-icons/fi";
 import { Content } from "../../components/Content/content";
 import styles from "./aplications.module.scss";
+import { IconType } from "react-icons";
 
 interface AmbienteItem {
-  icone: string;
+  icone: IconType;
   texto: string;
 }
 
 const items: AmbienteItem[] = [
-  { icone: "🚇", texto: "Metrôs e trens" },
-  { icone: "🛣️", texto: "Túneis e vias urbanas" },
-  { icone: "🪑", texto: "Mobiliário urbano" },
-  { icone: "🖼️", texto: "Outdoors e painéis" },
-  { icone: "🛍️", texto: "Pontos de venda" },
-  { icone: "🎪", texto: "Eventos e ativações" },
-  { icone: "🏛️", texto: "Stands e cenografia" },
+  { icone: <FiMap />, texto: "Metrôs e trens" },
+  { icone: <FiNavigation />, texto: "Túneis e vias urbanas" },
+  { icone: <FiGrid />, texto: "Mobiliário urbano" },
+  { icone: <FiMonitor />, texto: "Outdoors e painéis" },
+  { icone: <FiShoppingBag />, texto: "Pontos de venda" },
+  { icone: <FiCalendar />, texto: "Eventos e ativações" },
+  { icone: <FiPackage />, texto: "Stands e cenografia" },
 ];
 
 const Aplications = () => {
   return (
     <Content colorBottomPosition="left">
-      <section className={styles.ambientes}>
+      <section className={styles.contentAmbientes}>
         <div className={styles.header}>
           <h2 className={styles.title}>Onde sua marca pode estar</h2>
           <p className={styles.sub}>
@@ -28,7 +38,7 @@ const Aplications = () => {
           </p>
         </div>
 
-        <ul className={styles.lista}>
+        <ul className={styles.contentAplications}>
           {items.map(({ icone, texto }) => (
             <li key={texto} className={styles.card}>
               <span className={styles.icone}>{icone}</span>
