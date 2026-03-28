@@ -1,0 +1,55 @@
+@import "../../../styles/mixins.scss";
+
+.clientsWrapper {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.track {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  gap: 40px;
+  width: fit-content;
+  animation: scroll 20s linear infinite;
+  will-change: transform;
+}
+
+.item {
+  flex: 0 0 auto;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clientLogo {
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+  border-radius: 16px;
+
+  @include media("l") {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.clientLogo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+@keyframes scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(calc(-50% - 20px), 0, 0);
+  }
+}

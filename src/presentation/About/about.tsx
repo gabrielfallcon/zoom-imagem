@@ -2,14 +2,20 @@ import {
   FiArrowDownRight,
   FiSettings,
   FiMap,
-  FiCheckCircle, 
-  FiClock
-  
+  FiCheckCircle,
+  FiClock,
 } from "react-icons/fi";
 import { Content } from "../../components/Content/content";
 import styles from "./about.module.scss";
 import Image from "next/image";
 import { Button } from "../../components/Button/button";
+import Carousel from "@/presentation/About/Carousel/carousel";
+import {
+  LuAward,
+  LuBriefcaseBusiness,
+  LuMapPinCheck,
+  LuWrench,
+} from "react-icons/lu";
 
 const About = () => {
   return (
@@ -18,10 +24,14 @@ const About = () => {
         <span>Aqui, sua marca ganha presença.</span>
 
         <h2>
-          Atuamos com produção de materiais para OOH, PDV e projetos especiais em todo o Brasil, <strong> garantindo padrão, agilidade e execução com qualidade em escala.</strong>
+          Atuamos com produção de materiais para OOH, PDV e projetos especiais
+          em todo o Brasil,{" "}
+          <strong>
+            {" "}
+            garantindo padrão, agilidade e execução com qualidade em escala.
+          </strong>
         </h2>
       </div>
-
       <ul className={styles.contentSkills}>
         <li>
           <FiSettings size={32} color="#ED0874" />
@@ -29,7 +39,8 @@ const About = () => {
           <h3>Produção própria </h3>
 
           <p>
-            Controle total na produção de materiais publicitários e projetos especiais.
+            Controle total na produção de materiais publicitários e projetos
+            especiais.
           </p>
         </li>
         <li>
@@ -55,13 +66,12 @@ const About = () => {
 
           <h3>Qualidade de ponta a ponta</h3>
 
-          <p>
-            Do planejamento à execução, cada etapa é acompanhada de perto.
-          </p>
+          <p>Do planejamento à execução, cada etapa é acompanhada de perto.</p>
         </li>
       </ul>
-
-      <div className={styles.contentAbout}>
+      <p className={styles.ourClients}>Nossos clientes</p>
+      <Carousel />
+      {/* <div className={styles.contentAbout}>
         <Image
           alt="Sobre nós"
           src="/images/about-zoom.png"
@@ -92,15 +102,15 @@ const About = () => {
             expectativas.
           </p>
 
-          <Button className={styles.btn}
+          <Button
+            className={styles.btn}
             label="Impulsionar meu negócio"
             size="lg"
             variant="primary"
             icon={<FiArrowDownRight size={24} color="#0C1132" />}
           />
         </div>
-      </div>
-
+      </div> */}
       <div className={styles.weResults}>
         <span>Nossos Resultados</span>
 
@@ -114,38 +124,36 @@ const About = () => {
           <br /> somos capazes de fazer
         </h2>
       </div>
-
       <ul className={styles.contentNumberServices}>
         <li>
-          <FiCheckCircle size={40} color="#EE0874" />
+          <LuBriefcaseBusiness size={40} color="#EE0874" />
 
-          <span>100+</span>
+          <span>+2.000</span>
 
-          <p>serviços ofertados</p>
+          <p>projetos executados</p>
         </li>
         <li>
-          <FiCheckCircle size={40} color="#EE0874" />
+          <LuMapPinCheck size={40} color="#EE0874" />
 
-          <span>100+</span>
+          <span>+120</span>
 
-          <p>anos de experiência</p>
+          <p>cidades atendidas</p>
         </li>
         <li>
-          <FiCheckCircle size={40} color="#EE0874" />
+          <LuWrench size={40} color="#EE0874" />
 
-          <span>100+</span>
+          <span>+15.000</span>
 
-          <p>clientes satisfeitos</p>
+          <p>pontos instalados</p>
         </li>
         <li>
-          <FiCheckCircle size={40} color="#EE0874" />
+          <LuAward size={40} color="#EE0874" />
 
-          <span>100+</span>
+          <span>+24</span>
 
-          <p>negócios transformados</p>
+          <p>anos de atuação</p>
         </li>
       </ul>
-
       <div className={styles.contentCopy}>
         <h3>
           <strong>Acelere os resultados</strong> da sua empresa
@@ -158,7 +166,8 @@ const About = () => {
             <strong>Entre em contato agora mesmo!</strong>
           </p>
 
-          <Button className={styles.btnCopy}
+          <Button
+            className={styles.btnCopy}
             label="Entrar em contato"
             size="lg"
             variant="tertiary"

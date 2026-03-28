@@ -15,7 +15,6 @@ export interface IListServices {
 }
 
 export const listServices: IListServices[] = [
-
   {
     service: TypeService.Introduction,
     imgDeskt: "/images/web-desktop.png",
@@ -26,7 +25,7 @@ export const listServices: IListServices[] = [
   },
   {
     service: TypeService.OOH,
-    imgDeskt: "/images/web-desktop.png",
+    imgDeskt: "/images/ .jpg",
     imgMobile: "/images/web-mob.png",
     descriptionJob:
       "Projetos de mídia OOH com produção e instalação de outdoors, painéis, frontlights e outras soluções de publicidade externa.",
@@ -40,7 +39,7 @@ export const listServices: IListServices[] = [
       "Produção de materiais para PDV que fortalecem a presença da marca no momento da decisão de compra.",
     listCheck: ["Responsivo", "Optimizado", "alta tecnologia"],
   },
-  
+
   {
     service: TypeService.SpecialProjects,
     imgDeskt: "/images/ux-desktop.png",
@@ -57,5 +56,4 @@ export const listServices: IListServices[] = [
       "Produção com foco em materiais sustentáveis e soluções com menor impacto ambiental.",
     listCheck: ["público-alvo", "identidade visual", "personas"],
   },
-  
 ];
