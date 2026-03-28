@@ -12,18 +12,18 @@ import styles from "./aplications.module.scss";
 import { IconType } from "react-icons";
 
 interface AmbienteItem {
-  icone: IconType;
+  icon: IconType;
   texto: string;
 }
 
 const items: AmbienteItem[] = [
-  { icone: <FiMap />, texto: "Metrôs e trens" },
-  { icone: <FiNavigation />, texto: "Túneis e vias urbanas" },
-  { icone: <FiGrid />, texto: "Mobiliário urbano" },
-  { icone: <FiMonitor />, texto: "Outdoors e painéis" },
-  { icone: <FiShoppingBag />, texto: "Pontos de venda" },
-  { icone: <FiCalendar />, texto: "Eventos e ativações" },
-  { icone: <FiPackage />, texto: "Stands e cenografia" },
+  { icon: FiMap, texto: "Metrôs e trens" },
+  { icon: FiNavigation, texto: "Túneis e vias urbanas" },
+  { icon: FiGrid, texto: "Mobiliário urbano" },
+  { icon: FiMonitor, texto: "Outdoors e painéis" },
+  { icon: FiShoppingBag, texto: "Pontos de venda" },
+  { icon: FiCalendar, texto: "Eventos e ativações" },
+  { icon: FiPackage, texto: "Stands e cenografia" },
 ];
 
 const Aplications = () => {
@@ -39,9 +39,11 @@ const Aplications = () => {
         </div>
 
         <ul className={styles.contentAplications}>
-          {items.map(({ icone, texto }) => (
+          {items.map(({ icon: Icon, texto }) => (
             <li key={texto} className={styles.card}>
-              <span className={styles.icone}>{icone}</span>
+              <span className={styles.icone}>
+                <Icon size={24} />
+              </span>
               <span className={styles.texto}>{texto}</span>
             </li>
           ))}

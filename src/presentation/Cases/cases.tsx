@@ -54,6 +54,7 @@ const projects = [
 ];
 
 const Cases = () => {
+  
   return (
     <Content colorBottomPosition="left" colorTopPosition="right">
       <div className={styles.contentTitle}>
@@ -110,6 +111,7 @@ const Cases = () => {
             size="lg"
             variant="tertiary"
             icon={<FiArrowDownRight size={24} color="#EE0874" />}
+        
           />
         </div>
       </div>
