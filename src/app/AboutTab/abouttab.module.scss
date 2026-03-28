@@ -1,0 +1,12 @@
+@import "../../styles/mixins.scss";
+
+.contentAbout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 16px 16px;
+
+  @include media("l") {
+    font-size: 16px;
+  }
+}
