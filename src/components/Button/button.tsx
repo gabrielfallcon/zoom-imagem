@@ -1,6 +1,7 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 import styles from "./button.module.scss";
 import clsx from "clsx";
+import Image from "next/image";
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
@@ -44,16 +45,17 @@ const Button = ({
         hasVariant,
         size === "sm" && styles.sizeSm,
         size === "md" && styles.sizeMd,
-        size === "lg" && styles.sizeLg
+        size === "lg" && styles.sizeLg,
       )}
       onClick={onClick}
       {...props}
     >
       {load ? (
-        <img
+        <Image
+          width={100}
+          height={100}
           src="/images/loading.svg"
           alt="Carregando"
-          className={styles.loading}
         />
       ) : (
         <>

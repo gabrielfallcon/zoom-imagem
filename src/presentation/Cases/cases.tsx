@@ -5,10 +5,10 @@ import {
   FiTarget,
   FiTool
 } from "react-icons/fi";
-import { Content } from "../Content/content";
+import { Content } from "../../components/Content/content";
 import styles from "./cases.module.scss";
 
-import { Button } from "../Button/button";
+import { Button } from "../../components/Button/button";
 
 const steps = [
   {

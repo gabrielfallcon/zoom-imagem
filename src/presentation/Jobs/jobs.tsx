@@ -2,17 +2,14 @@ import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import { Checkbox } from "../Checkbox/checkbox";
-import { Content } from "../Content/content";
-import {
-  IListServices,
-  listServices
-} from "./constants/jobs.constants";
+import { Checkbox } from "../../components/Checkbox/checkbox";
+import { Content } from "../../components/Content/content";
+import { IListServices, listServices } from "./constants/jobs.constants";
 import styles from "./jobs.module.scss";
 
 const Jobs = () => {
   const [activeService, setActiveService] = useState<IListServices>(
-    listServices[1]
+    listServices[1],
   );
 
   const handleActiveService = (service: IListServices) => {
@@ -25,7 +22,8 @@ const Jobs = () => {
         {/* <span>o que oferecemos</span> */}
 
         <h2>
-          <strong> Soluções completas </strong> em OOH, PDV e produção de materiais publicitários
+          <strong> Soluções completas </strong> em OOH, PDV e produção de
+          materiais publicitários
         </h2>
 
         <div className={styles.contentArrow}>
@@ -45,7 +43,8 @@ const Jobs = () => {
               <li
                 key={key}
                 className={clsx(
-                  item.service === activeService.service && styles.activeService
+                  item.service === activeService.service &&
+                    styles.activeService,
                 )}
                 onClick={() => handleActiveService(item)}
               >
@@ -58,11 +57,11 @@ const Jobs = () => {
         <div className={styles.serviceItem}>
           <h2>{activeService.service}</h2>
 
-          <Image 
-            src={activeService.imgDeskt} 
-            width={500} 
+          <Image
+            src={activeService.imgDeskt}
+            width={500}
             height={300}
-            alt="Serviço" 
+            alt="Serviço"
           />
 
           <p>{activeService.descriptionJob}</p>
@@ -85,12 +84,12 @@ const Jobs = () => {
           <div className={styles.serviceItem} key={key}>
             <h2>{service.service}</h2>
 
-            <Image 
-            src={activeService.imgMobile} 
-            width={300} 
-            height={250}
-            alt="Serviço" 
-          />
+            <Image
+              src={activeService.imgMobile}
+              width={300}
+              height={250}
+              alt="Serviço"
+            />
 
             <p>{service.descriptionJob}</p>
 

@@ -1,8 +1,8 @@
 import styles from "./talking.module.scss";
 import { FiInstagram, FiSmartphone, FiMail, FiSend } from "react-icons/fi";
 import Image from "next/image";
-import { Content } from "../Content/content";
-import { Button } from "../Button/button";
+import { Content } from "../../components/Content/content";
+import { Button } from "../../components/Button/button";
 
 const Talking = () => {
   const subjectOptions = [
@@ -27,13 +27,13 @@ const Talking = () => {
 
         <div className={styles.contentCentral}>
           <div className={styles.imageWrapper}>
-              <Image
-                className={styles.image}
-                alt="Fale conosco"
-                src="/images/talking.jpg"
-                width={334}
-                height={621}
-              />
+            <Image
+              className={styles.image}
+              alt="Fale conosco"
+              src="/images/talking.jpg"
+              width={334}
+              height={621}
+            />
           </div>
 
           <div className={styles.contentForm}>
