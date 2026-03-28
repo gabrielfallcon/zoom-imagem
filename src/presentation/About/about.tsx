@@ -7,7 +7,6 @@ import {
 } from "react-icons/fi";
 import { Content } from "../../components/Content/content";
 import styles from "./about.module.scss";
-import Image from "next/image";
 import { Button } from "../../components/Button/button";
 import Carousel from "@/presentation/About/Carousel/carousel";
 import {

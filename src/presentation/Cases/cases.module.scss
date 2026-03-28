@@ -17,18 +17,18 @@
     font-size: 14px;
     letter-spacing: 0.01em;
     font-weight: 500;
-    text-transform: uppercase;
-    margin-bottom: 8px;
+    // text-transform: uppercase;
+    margin: 8px 0;
 
     @include media("l") {
       font-size: 16px;
-      margin-bottom: 16px;
+      margin: 16px 0;
     }
   }
 
   h2 {
     width: 100%;
-    max-width: 925px;
+    
     font-weight: 400;
     font-size: 32px;
     line-height: 110%;
@@ -36,6 +36,7 @@
 
     @include media("l") {
       font-size: 64px;
+      max-width: 1120px;
     }
 
     strong {
@@ -45,24 +46,50 @@
   }
 }
 
-.listCases {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 24px;
-  margin-bottom: 100px;
 
-  li {
-    width: 100%;
-    max-width: 530px;
-    min-width: 300px;
-    height: 400px;
-    background-image: url("/images/cases.png");
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 16px;
+.listCases {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.listCaseItem {
+  position: relative;
+  min-height: 350px;
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 24px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: flex-end;
+
+  h3 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.2),
+      transparent
+    );
+    z-index: 1;
   }
 }
+
 
 .process {
   width: 100%;
@@ -71,13 +98,13 @@
   position: relative;
   gap: 40px;
   padding: 40px 0;
+  margin: 32px 0;
 
   @include media("l") {
     display: flex;
   }
-  // linha conectora
+
   &::before {
-  
     content: "";
     position: absolute;
     top: 18px;
@@ -85,15 +112,15 @@
     right: 0;
     width: 50%;
     height: 2px;
-     background: linear-gradient(
-    117.58deg,
-    rgba(215, 237, 237, 0.16) 20%,
-    rgba(204, 235, 235, 0) 80%
-  );
+    background: linear-gradient(
+      117.58deg,
+      rgba(215, 237, 237, 0.16) 20%,
+      rgba(204, 235, 235, 0) 80%
+    );
     z-index: 0;
   }
 
-  &::after {        
+  &::after {
     content: "";
     position: absolute;
     width: 50%;
@@ -102,10 +129,10 @@
     right: 50%;
     height: 2px;
     background: linear-gradient(
-    117.58deg,
-    rgba(215, 237, 237, 0) 20%,
-    rgba(204, 235, 235, 0.16) 80%
-  );
+      117.58deg,
+      rgba(215, 237, 237, 0) 20%,
+      rgba(204, 235, 235, 0.16) 80%
+    );
     z-index: 0;
   }
 }
@@ -163,7 +190,7 @@
   display: flex;
   padding: 48px 24px;
   border-radius: 20px;
-  background: linear-gradient(210deg, #FED207 20%, #EE0874);
+  background: linear-gradient(210deg, #fed207 20%, #ee0874);
   gap: 64px;
   flex-direction: column;
 

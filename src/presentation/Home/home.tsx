@@ -7,6 +7,7 @@ import { Footer } from "../Footer/footer";
 import { Jobs } from "../Jobs/jobs";
 import { Hall } from "./fragments/hall/hall";
 import { Talking } from "../Talking/talking";
+import { Aplications } from "../Aplications/aplications";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <Hall />
         <About />
         <Jobs />
+        <Aplications />
         <Cases />
         <Talking />
       </div>
