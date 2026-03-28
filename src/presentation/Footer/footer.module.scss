@@ -63,35 +63,38 @@
   width: 100%;
 
   @include media("l") {
-      width: auto;
+    width: auto;
   }
 
-  // & > .policy {
-  //   @include media("l") {
-  //     display: none;
-  //   }
-  // }
 }
 
 .localization {
-  display: block;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
-  color: #fafafa;
-  max-width: 160px;
-  
-  align-items: flex-start;
+  display: flex;
+  max-width: 460px;
+  gap: 16px;
+ justify-content: space-between;
+ 
 
-  @include media("l") {
-    color: rgba(255, 255, 255, 0.6);
-    height: 170px;
-  }
+  p {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #fafafa;
+    max-width: 160px;
 
-  strong {
-    font-size: 20px;
-    font-weight: 600;
+    align-items: flex-start;
+
+    @include media("l") {
+      color: rgba(255, 255, 255, 0.6);
+      height: 170px;
+    }
+
+    strong {
+      font-size: 20px;
+      font-weight: 600;
+    }
   }
 }
 
@@ -102,7 +105,7 @@
   gap: 16px;
 
   // @include media("l") {
-    
+
   // }
 
   li {
@@ -116,7 +119,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(225deg, #ee0874 0%,   #ff3a96 100%);
+      background: linear-gradient(225deg, #ee0874 0%, #ff3a96 100%);
       border-radius: 4px;
     }
 
@@ -146,15 +149,15 @@
     right: 0;
     width: 50%;
     height: 2px;
-     background: linear-gradient(
-    117.58deg,
-    rgba(215, 237, 237, 0.16) 20%,
-    rgba(204, 235, 235, 0) 80%
-  );
+    background: linear-gradient(
+      117.58deg,
+      rgba(215, 237, 237, 0.16) 20%,
+      rgba(204, 235, 235, 0) 80%
+    );
     z-index: 0;
   }
 
-  &::after {        
+  &::after {
     content: "";
     position: absolute;
     width: 50%;
@@ -163,10 +166,10 @@
     right: 50%;
     height: 2px;
     background: linear-gradient(
-    117.58deg,
-    rgba(215, 237, 237, 0) 20%,
-    rgba(204, 235, 235, 0.16) 80%
-  );
+      117.58deg,
+      rgba(215, 237, 237, 0) 20%,
+      rgba(204, 235, 235, 0.16) 80%
+    );
     z-index: 0;
   }
 }

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import styles from "./header.module.scss";
 import { FiMenu, FiX } from "react-icons/fi";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,6 +12,12 @@ const Header = () => {
   const clickMenuMobile = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const router = useRouter();
+
+  function handleClick(link: string) {
+    router.push(link);
+  }
   return (
     <>
       <div className={styles.headerWrapper}>
@@ -23,11 +30,11 @@ const Header = () => {
           />
 
           <ul className={styles.listMenu}>
-            <li>Home</li>
+            <li onClick={() => handleClick("/Home")}>Home</li>
             <li>Soluções</li>
             <li>Projetos</li>
-            <li>Sobre</li>
-            <li>Fale com a Zoom</li>
+            <li onClick={() => handleClick("/AboutTab")}>Sobre</li>
+            <li onClick={() => handleClick("/Talking")}>Fale com a Zoom</li>
           </ul>
         </header>
 

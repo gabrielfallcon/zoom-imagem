@@ -7,8 +7,12 @@ const Footer = () => {
     <div className={styles.footerWrapper}>
       <div className={styles.content}>
         <div className={styles.contentLogo}>
-          <Image src="/images/logo-zoom.svg" alt="PlinApps" width={200}
-          height={60}/>
+          <Image
+            src="/images/logo-zoom.svg"
+            alt="PlinApps"
+            width={200}
+            height={60}
+          />
         </div>
 
         <ul className={styles.listInstitucional}>
@@ -19,16 +23,21 @@ const Footer = () => {
           <li>Linha Eco</li>
         </ul>
 
-        <p className={styles.localization}>
-          <strong>São Paulo</strong><br/>
-          Rua Paulo Emílio Salles Gomes, 45, - Limão
-          São Paulo - SP, 02710-110, Brasil
-        </p>
+        <div className={styles.localization}>
+          <p>
+            <strong>São Paulo</strong>
+            <br />
+            Rua Paulo Emílio Salles Gomes, 45, - Limão São Paulo - SP,
+            02710-110, Brasil
+          </p>
 
-        <p className={styles.localization}>
-          <strong>Lauro de Freitas</strong><br/>
-          R. Prisco José de Souza, s/n - Lote Amp Recreio Ipitanga, Q 28 - Caji - Lauro de Freitas - BA, 42700-130, Brasil
-        </p>
+          <p>
+            <strong>Lauro de Freitas</strong>
+            <br />
+            R. Prisco José de Souza, s/n - Lote Amp Recreio Ipitanga, Q 28 -
+            Caji - Lauro de Freitas - BA, 42700-130, Brasil
+          </p>
+        </div>
 
         <ul className={styles.listSocialMobile}>
           <li>
@@ -61,8 +70,6 @@ const Footer = () => {
             <span>zoom-imagem/</span>
           </li>
         </ul>
-
-        
       </div>
       <div className={styles.contentSEO}>
         <ul className={styles.listSEO}>
@@ -77,4 +84,3 @@ const Footer = () => {
 };
 
 export { Footer };
-

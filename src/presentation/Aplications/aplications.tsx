@@ -41,7 +41,7 @@ const Aplications = () => {
         <ul className={styles.contentAplications}>
           {items.map(({ icon: Icon, texto }) => (
             <li key={texto} className={styles.card}>
-              <span className={styles.icone}>
+              <span>
                 <Icon size={24} />
               </span>
               <span className={styles.texto}>{texto}</span>

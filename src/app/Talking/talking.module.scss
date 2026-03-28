@@ -1,36 +1,13 @@
-$bg-page: #0d1117;
-$bg-card: #111820;
-$bg-input: #1a2230;
-$bg-input-hover: #1f2a3a;
-$border-color: #2a3a4a;
-$border-focus: #5cff3a;
-
-$green-accent: #7fff3a;
-$green-dark: #4ccc20;
-$text-primary: #ffffff;
-$text-secondary: #8fa3b8;
-$text-muted: #506070;
-$label-color: #a0b4c8;
-
-$font-display: "DM Sans", "Segoe UI", sans-serif;
-$font-body: "DM Sans", "Segoe UI", sans-serif;
-
 @import "../../styles/mixins.scss";
 
 .contentTalking {
-  min-height: 100vh;
   width: 100%;
-  background: #111022;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: $font-body;
-  border-radius: 24px;
-  margin-bottom: 16px;
-
+  flex-direction: column;
+  padding: 0 16px 16px 16px;
+  
   @include media("l") {
     font-size: 16px;
-    padding: 100px;
   }
 }
 
@@ -42,7 +19,7 @@ $font-body: "DM Sans", "Segoe UI", sans-serif;
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.18em;
-    color: $text-muted;
+    color: #506070;
     text-transform: uppercase;
     margin-bottom: 10px;
   }
@@ -109,7 +86,7 @@ $font-body: "DM Sans", "Segoe UI", sans-serif;
     font-size: 16px;
     line-height: 1.65;
     align-items: start;
-    color: $text-secondary;
+    color: #8fa3b8;
   }
 
   @include media("l") {
@@ -134,7 +111,7 @@ $font-body: "DM Sans", "Segoe UI", sans-serif;
   label {
     font-size: 12px;
     font-weight: 500;
-    color: $label-color;
+    color: #a0b4c8;
     letter-spacing: 0.02em;
   }
 
@@ -177,7 +154,7 @@ $font-body: "DM Sans", "Segoe UI", sans-serif;
   label {
     font-size: 12px;
     font-weight: 500;
-    color: $label-color;
+    color: #a0b4c8;
     letter-spacing: 0.02em;
   }
 
@@ -226,7 +203,7 @@ $font-body: "DM Sans", "Segoe UI", sans-serif;
     right: 14px;
     top: 50%;
     transform: translateY(-50%);
-    color: $text-muted;
+    color: #506070;
     pointer-events: none;
     font-size: 14px;
   }
@@ -234,7 +211,7 @@ $font-body: "DM Sans", "Segoe UI", sans-serif;
   label {
     font-size: 12px;
     font-weight: 500;
-    color: $label-color;
+    color: #a0b4c8;
     letter-spacing: 0.02em;
   }
 
@@ -252,7 +229,7 @@ $font-body: "DM Sans", "Segoe UI", sans-serif;
 
     option {
       background: #1a1d21;
-      color: $text-primary;
+      color: #fff;
     }
   }
 }
@@ -271,7 +248,7 @@ $font-body: "DM Sans", "Segoe UI", sans-serif;
   padding: 20px 40px;
   flex-wrap: wrap;
 
-  @include media ("l") {
+  @include media("l") {
     display: flex;
 
     padding: 20px 24px;

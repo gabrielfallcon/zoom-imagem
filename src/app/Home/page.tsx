@@ -1,15 +1,14 @@
 "use client";
 import styles from "./home.module.scss";
-
-import { About } from "../About/about";
-import { Cases } from "../Cases/cases";
-import { Footer } from "../Footer/footer";
-import { Jobs } from "../Jobs/jobs";
+import { About } from "../../presentation/About/about";
+import { Cases } from "../../presentation/Cases/cases";
+import { Footer } from "../../presentation/Footer/footer";
+import { Jobs } from "../../presentation/Jobs/jobs";
 import { Hall } from "./fragments/hall/hall";
-import { Talking } from "../Talking/talking";
-import { Aplications } from "../Aplications/aplications";
+import { Talking } from "../Talking/page";
+import { Aplications } from "../../presentation/Aplications/aplications";
 
-const Home = () => {
+export default function Home () {
   return (
     <>
       <div className={styles.homeWrapper}>
@@ -20,7 +19,6 @@ const Home = () => {
         <Jobs />
         <Aplications />
         <Cases />
-        <Talking />
       </div>
       <Footer />
     </>

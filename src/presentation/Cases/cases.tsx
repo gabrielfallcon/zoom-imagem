@@ -8,6 +8,7 @@ import {
 import { Content } from "../../components/Content/content";
 import styles from "./cases.module.scss";
 import { Button } from "../../components/Button/button";
+import { useRouter } from "next/navigation";
 
 const steps = [
   {
@@ -54,7 +55,12 @@ const projects = [
 ];
 
 const Cases = () => {
-  
+  const router = useRouter();
+
+  function handleClick() {
+    router.push("/Talking");
+  }
+
   return (
     <Content colorBottomPosition="left" colorTopPosition="right">
       <div className={styles.contentTitle}>
@@ -105,13 +111,14 @@ const Cases = () => {
             <strong>OOH, PDV e projetos especiais </strong>e leve sua marca para
             os principais pontos de contato com o público.
           </p>
+          
 
           <Button
             label="Falar com a Zoom"
             size="lg"
             variant="tertiary"
             icon={<FiArrowDownRight size={24} color="#EE0874" />}
-        
+            onClick={handleClick}
           />
         </div>
       </div>

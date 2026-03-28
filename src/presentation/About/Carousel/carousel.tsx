@@ -6,6 +6,10 @@ const logos = [
   "/images/client-logo/netflix.png",
   "/images/client-logo/amazon.jpg",
   "/images/client-logo/99.png",
+  "/images/client-logo/santander1.png",
+  "/images/client-logo/netflix.png",
+  "/images/client-logo/amazon.jpg",
+  "/images/client-logo/99.png",
 ];
 
 export default function Carousel() {
