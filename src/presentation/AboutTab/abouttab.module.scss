@@ -1,0 +1,266 @@
+@import "../../styles/mixins.scss";
+
+.contentAbout {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 64px;
+  flex-direction: column;
+
+  @include media("l") {
+    margin-bottom: 100px;
+  }
+
+  @include media("l") {
+    gap: 48px;
+    flex-direction: row;
+  }
+
+  img {
+    display: none;
+    width: 100% !important;
+    height: 700px;
+    border-radius: 16px;
+
+    @include media("l") {
+      display: flex;
+      max-width: 586px !important;
+      height: 100% !important;
+    }
+  }
+
+  .aboutDescription {
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 22.4px;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+      color: #c4c4c4;
+      text-transform: uppercase;
+
+      @include media("l") {
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 100%;
+      color: #ffffff;
+      margin-bottom: 24px;
+
+      @include media("l") {
+        font-size: 64px;
+        margin-bottom: 32px;
+      }
+
+      strong {
+        color: #ee0874;
+        font-weight: 600;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 28px;
+      color: #c4c4c4;
+      margin-bottom: 24px;
+
+      @include media("l") {
+        font-size: 20px;
+        margin-bottom: 32px;
+      }
+
+      strong {
+        color: #ee0874;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 327px;
+    margin: 0;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fed207;
+    color: #0c1132;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+
+    @include media("l") {
+      max-width: 268px;
+      margin: none;
+    }
+  }
+}
+
+// ─── Design Tokens ───────────────────────────────────────────────────────────
+$color-bg: #f4f7f9;
+$color-panel-bg: #eaf0f4;
+
+$bubble-dashed: #c8d8dc;
+$bubble-light: #b0c4cc;
+$bubble-medium: #7b9fac;
+$bubble-dark: #4a7a8a;
+$bubble-accent: #2b5f75;
+
+$text-phase: #6b8fa0;
+$text-tool: #5a7585;
+$font-display: "DM Sans", "Segoe UI", sans-serif;
+
+.contentOperations {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  border-radius: 16px;
+  overflow-x: auto;
+}
+
+// ─── Stage Column ────────────────────────────────────────────────────────────
+.stageCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  min-width: 110px;
+}
+
+// ─── Phase Label ─────────────────────────────────────────────────────────────
+.bubbleTitle {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6b8fa0;
+  margin: 0;
+  height: 20px;
+  text-align: center;
+}
+
+.phaseEmpty {
+  height: 20px;
+}
+
+.bubble {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: default;
+
+  &:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.bubbleLabel {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.light {
+  background: #ff87bf;
+}
+
+.medium {
+  background:#ff429a;
+}
+
+.dark {
+  background: #ff1884;
+}
+
+.accent {
+  background: #ee0874;
+  box-shadow: 0 4px 16px rgba(43, 95, 117, 0.35);
+}
+
+.tools {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  li {
+    font-size: 16px;
+    color: $text-tool;
+    line-height: 1.7;
+  }
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px;
+  margin-top: -40px; 
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #a0b8c4;
+  display: block;
+}
+
+.arrowHead {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 9px solid #a0b8c4;
+}
+
+// ─── Responsive ──────────────────────────────────────────────────────────────
+@media (max-width: 768px) {
+  .funnel {
+    flex-direction: column;
+    padding: 32px 24px;
+    align-items: center;
+  }
+
+  .arrow {
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 0;
+    gap: 4px;
+    padding: 8px 0;
+  }
+
+  .arrowHead {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 9px solid #a0b8c4;
+    border-bottom: none;
+  }
+}

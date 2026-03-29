@@ -5,10 +5,10 @@ import {
   FiCheckCircle,
   FiClock,
 } from "react-icons/fi";
-import { Content } from "../../../components/Content/content";
+import { Content } from "../../components/Content/content";
 import styles from "./abouthome.module.scss";
-import { Button } from "../../../components/Button/button";
-import Carousel from "@/presentation/About/Carousel/carousel";
+import { Button } from "../../components/Button/button";
+import Carousel from "@/components/Carousel/carousel";
 import {
   LuAward,
   LuBriefcaseBusiness,
@@ -16,7 +16,7 @@ import {
   LuWrench,
 } from "react-icons/lu";
 
-const About = () => {
+export default function AboutHome() {
   return (
     <Content colorBottomPosition="right" colorTopPosition="right">
       <div className={styles.contentPurpose}>
@@ -70,46 +70,6 @@ const About = () => {
       </ul>
       <p className={styles.ourClients}>Nossos clientes</p>
       <Carousel />
-      {/* <div className={styles.contentAbout}>
-        <Image
-          alt="Sobre nós"
-          src="/images/about-zoom.png"
-          width={586}
-          height={500}
-        />
-
-        <div className={styles.aboutDescription}>
-          <span>Sobre Nós</span>
-
-          <h2>
-            Somos a <strong>Zoom</strong>
-          </h2>
-
-          <p>
-            Uma empresa de transformação digital especializada em criar soluções
-            integradas para Branding e Identidade Visual, Design UX/UI e
-            Desenvolvimento de Sites, Apps e Sistemas. Combinamos{" "}
-            <strong>criatividade</strong> e <strong>tecnologia</strong> para
-            entregar projetos excepcionais que atendem às necessidades
-            específicas de cada cliente.
-            <br /> <br /> <br />
-            Nosso diferencial está na nossa abordagem personalizada e na{" "}
-            <strong>entrega ágil e eficaz</strong>, garantindo resultados de
-            alta performance que impulsionam o crescimento do seu negócio.
-            Utilizamos as mais recentes tecnologias e práticas de design para
-            garantir que nossos projetos não apenas atendam, mas superem suas
-            expectativas.
-          </p>
-
-          <Button
-            className={styles.btn}
-            label="Impulsionar meu negócio"
-            size="lg"
-            variant="primary"
-            icon={<FiArrowDownRight size={24} color="#0C1132" />}
-          />
-        </div>
-      </div> */}
       <div className={styles.weResults}>
         <span>Nossos Resultados</span>
 
@@ -176,6 +136,6 @@ const About = () => {
       </div>
     </Content>
   );
-};
+}
 
-export { About };
+export { AboutHome };

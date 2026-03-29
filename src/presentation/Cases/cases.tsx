@@ -8,8 +8,6 @@ import {
 import { Content } from "../../components/Content/content";
 import styles from "./cases.module.scss";
 import { Button } from "../../components/Button/button";
-import { useRouter } from "next/navigation";
-
 const steps = [
   {
     icon: FiTarget,
@@ -55,14 +53,10 @@ const projects = [
 ];
 
 const Cases = () => {
-  const router = useRouter();
-
-  function handleClick() {
-    router.push("/Talking");
-  }
+  
 
   return (
-    <Content colorBottomPosition="left" colorTopPosition="right">
+    <Content colorTopPosition="right">
       <div className={styles.contentTitle}>
         <h2>Projetos de OOH, PDV e ativações executados em todo o Brasil</h2>
 
@@ -118,7 +112,6 @@ const Cases = () => {
             size="lg"
             variant="tertiary"
             icon={<FiArrowDownRight size={24} color="#EE0874" />}
-            onClick={handleClick}
           />
         </div>
       </div>

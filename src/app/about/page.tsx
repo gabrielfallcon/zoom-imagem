@@ -1,6 +1,4 @@
-
-
-import { About as AboutComponent } from "@/presentation/About/about";
+import { About as AboutComponent } from "@/components/About/about";
 import "../../styles/global.scss";
 
 export default function About() {

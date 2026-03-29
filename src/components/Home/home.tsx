@@ -1,6 +1,7 @@
 "use client";
+
 import styles from "./home.module.scss";
-import { About } from "../../presentation/About/AboutHome/abouthome";
+import { AboutHome } from "../../presentation/AboutHome/abouthome";
 import { Cases } from "../../presentation/Cases/cases";
 import { Footer } from "../../presentation/Footer/footer";
 import { Jobs } from "../../presentation/Jobs/jobs";
@@ -14,7 +15,7 @@ export default function Home() {
         <div className={styles.homeBackground} />
         <div className={styles.homeBackground2} />
         <Hall />
-        <About />
+        <AboutHome />
         <Jobs />
         <Aplications />
         <Cases />
