@@ -4,6 +4,7 @@ import { FiInstagram, FiSmartphone, FiMail, FiSend } from "react-icons/fi";
 import Image from "next/image";
 import { Content } from "../../../components/Content/content";
 import { Button } from "../../../components/Button/button";
+import { useState } from "react";
 
 export default function Contact() {
   const subjectOptions = [
@@ -15,8 +16,45 @@ export default function Contact() {
     "Outros",
   ];
 
+  type data = {
+    name: string;
+    email: string;
+    message: string;
+  };
+
+  const [data, setData] = useState<data>({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (field: string, value: string) => {
+    setData((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    
+    if (!res.ok) {
+      console.error("Erro ao enviar");
+      return;
+    }
+
+    console.log("Enviado com sucesso");
+  };
+
+  
+
   return (
-    <section className={styles.contentContact}>
+    <form onSubmit={handleSubmit} className={styles.contentContact}>
       <Content colorTopPosition="right">
         <div className={styles.contentHeader}>
           <p>FALE CONOSCO</p>
@@ -48,8 +86,11 @@ export default function Contact() {
                 <label>Nome completo</label>
                 <input
                   type="text"
-                  name="nome"
                   placeholder="Informe o nome completo"
+                  value={data.name}
+
+                  onChange={(e) => handleChange("name", e.target.value)}
+                  
                 />
               </div>
 
@@ -57,9 +98,10 @@ export default function Contact() {
                 <div className={styles.field}>
                   <label>E-mail</label>
                   <input
-                    type="email"
-                    name="email"
-                    placeholder="Informe um e-mail"
+                    type="text"
+                    placeholder="Informe o nome completo"
+                    value={data.email}
+                    onChange={(e) => handleChange("email", e.target.value)}
                   />
                 </div>
 
@@ -94,9 +136,11 @@ export default function Contact() {
               <div className={styles.fieldFull}>
                 <label className={styles.label}>Mensagem</label>
                 <textarea
-                  name="mensagem"
                   placeholder="Digite sua mensagem"
-                  rows={4}
+                  value={data.message}
+
+                  onChange={(e) => handleChange("message", e.target.value)}
+                
                 />
               </div>
 
@@ -107,6 +151,7 @@ export default function Contact() {
                   size="lg"
                   variant="primary"
                   icon={<FiSend size={24} color="#0C1132" />}
+                  type="submit"
                 />
               </div>
             </div>
@@ -122,7 +167,7 @@ export default function Contact() {
           <span> contato@zoom.com </span>
         </div>
       </Content>
-    </section>
+    </form>
   );
 }
 
