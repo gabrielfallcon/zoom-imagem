@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/global.scss"
 import { Header } from "../components/Header/header";
-import { Center } from "../components/Center/center";
 
 export const metadata: Metadata = {
   title: "Zoom",

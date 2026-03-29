@@ -1,4 +1,4 @@
-import { Home as HomeComponent } from "./Home/page";
+import { Home as HomeComponent } from ".././components/Home/home";
 import "../styles/global.scss";
 
 export default function Home() {

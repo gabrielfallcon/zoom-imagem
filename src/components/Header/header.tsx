@@ -30,11 +30,11 @@ const Header = () => {
           />
 
           <ul className={styles.listMenu}>
-            <li onClick={() => handleClick("/Home")}>Home</li>
+            <li onClick={() => handleClick("/")}>Home</li>
             <li>Soluções</li>
             <li>Projetos</li>
-            <li onClick={() => handleClick("/AboutTab")}>Sobre</li>
-            <li onClick={() => handleClick("/Talking")}>Fale com a Zoom</li>
+            <li onClick={() => handleClick("/about")}>Sobre</li>
+            <li onClick={() => handleClick("/contact")}>Fale com a Zoom</li>
           </ul>
         </header>
 
