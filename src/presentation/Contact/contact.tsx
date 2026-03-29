@@ -2,14 +2,14 @@
 import styles from "./contact.module.scss";
 import { FiInstagram, FiSmartphone, FiMail, FiSend } from "react-icons/fi";
 import Image from "next/image";
-import { Content } from "../../../components/Content/content";
-import { Button } from "../../../components/Button/button";
+import { Content } from "../../components/Content/content";
+import { Button } from "../../components/Button/button";
 import { useState } from "react";
 
 export default function Contact() {
   const subjectOptions = [
-    "Consultoria",
-    "Desenvolvimento de App",
+    "OOH - Out oh home",
+    "PDV - Ponto de venda",
     "Design de Produto",
     "Parcerias",
     "Suporte Técnico",
@@ -42,16 +42,20 @@ export default function Contact() {
       },
       body: JSON.stringify(data),
     });
-    
+
     if (!res.ok) {
       console.error("Erro ao enviar");
       return;
     }
-
-    console.log("Enviado com sucesso");
   };
 
-  
+  const handleClear = () => {
+    setData({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
 
   return (
     <form onSubmit={handleSubmit} className={styles.contentContact}>
@@ -88,9 +92,7 @@ export default function Contact() {
                   type="text"
                   placeholder="Informe o nome completo"
                   value={data.name}
-
                   onChange={(e) => handleChange("name", e.target.value)}
-                  
                 />
               </div>
 
@@ -138,9 +140,7 @@ export default function Contact() {
                 <textarea
                   placeholder="Digite sua mensagem"
                   value={data.message}
-
                   onChange={(e) => handleChange("message", e.target.value)}
-                
                 />
               </div>
 
@@ -152,6 +152,7 @@ export default function Contact() {
                   variant="primary"
                   icon={<FiSend size={24} color="#0C1132" />}
                   type="submit"
+                  onClick={handleClear}
                 />
               </div>
             </div>

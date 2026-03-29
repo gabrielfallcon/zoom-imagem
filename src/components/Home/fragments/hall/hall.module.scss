@@ -145,8 +145,8 @@
   background: #fed207;
   align-self: center;
   align-self: flex-end;
-  box-shadow:
-    0 -5px 99px rgba(254, 210, 7, 1),
+    box-shadow:
+      0 -5px 99px rgba(254, 210, 7, 1),
     0 -8px 109px rgba(254, 210, 7, 1);
 
   @include media("l") {
