@@ -9,12 +9,9 @@
   flex-direction: column;
 
   @include media("l") {
-    margin-bottom: 100px;
-  }
-
-  @include media("l") {
     gap: 48px;
     flex-direction: row;
+    margin-bottom: 100px;
   }
 
   img {
@@ -109,20 +106,6 @@
   }
 }
 
-// ─── Design Tokens ───────────────────────────────────────────────────────────
-$color-bg: #f4f7f9;
-$color-panel-bg: #eaf0f4;
-
-$bubble-dashed: #c8d8dc;
-$bubble-light: #b0c4cc;
-$bubble-medium: #7b9fac;
-$bubble-dark: #4a7a8a;
-$bubble-accent: #2b5f75;
-
-$text-phase: #6b8fa0;
-$text-tool: #5a7585;
-$font-display: "DM Sans", "Segoe UI", sans-serif;
-
 .contentOperations {
   display: flex;
   width: 100%;
@@ -133,7 +116,6 @@ $font-display: "DM Sans", "Segoe UI", sans-serif;
   overflow-x: auto;
 }
 
-// ─── Stage Column ────────────────────────────────────────────────────────────
 .stageCol {
   display: flex;
   flex-direction: column;
@@ -142,7 +124,6 @@ $font-display: "DM Sans", "Segoe UI", sans-serif;
   min-width: 110px;
 }
 
-// ─── Phase Label ─────────────────────────────────────────────────────────────
 .bubbleTitle {
   font-size: 14px;
   font-weight: 700;
@@ -190,7 +171,7 @@ $font-display: "DM Sans", "Segoe UI", sans-serif;
 }
 
 .medium {
-  background:#ff429a;
+  background: #ff429a;
 }
 
 .dark {
@@ -210,7 +191,7 @@ $font-display: "DM Sans", "Segoe UI", sans-serif;
 
   li {
     font-size: 16px;
-    color: $text-tool;
+    color: #5a7585;
     line-height: 1.7;
   }
 }
@@ -220,7 +201,7 @@ $font-display: "DM Sans", "Segoe UI", sans-serif;
   align-items: center;
   gap: 4px;
   padding: 0 8px;
-  margin-top: -40px; 
+  margin-top: -40px;
   flex-shrink: 0;
 }
 
@@ -239,28 +220,4 @@ $font-display: "DM Sans", "Segoe UI", sans-serif;
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
   border-left: 9px solid #a0b8c4;
-}
-
-// ─── Responsive ──────────────────────────────────────────────────────────────
-@media (max-width: 768px) {
-  .funnel {
-    flex-direction: column;
-    padding: 32px 24px;
-    align-items: center;
-  }
-
-  .arrow {
-    flex-direction: column;
-    margin-top: 0;
-    margin-left: 0;
-    gap: 4px;
-    padding: 8px 0;
-  }
-
-  .arrowHead {
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 9px solid #a0b8c4;
-    border-bottom: none;
-  }
 }
