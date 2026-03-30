@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
+      from: "Zoom <onboarding@resend.dev>",
       to: process.env.EMAIL_TO!,
       subject: `Nova solicitação de contato - ${name}`,
       react: ContactEmailTemplate({
