@@ -5,7 +5,8 @@ import Image from "next/image";
 import { Content } from "../../components/Content/content";
 import { Button } from "../../components/Button/button";
 import { useState } from "react";
-import { Footer } from "../Footer/footer";
+import { Footer } from "@/components/Footer/footer";
+
 
 export default function Contact() {
   const subjectOptions = [

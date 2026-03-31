@@ -3,7 +3,7 @@
 import styles from "./home.module.scss";
 import { AboutHome } from "../../presentation/AboutHome/abouthome";
 import { Cases } from "../../presentation/Cases/cases";
-import { Footer } from "../../presentation/Footer/footer";
+import { Footer } from "../Footer/footer";
 import { Jobs } from "../../presentation/Jobs/jobs";
 import { Hall } from "./fragments/hall/hall";
 import { Aplications } from "../../presentation/Aplications/aplications";

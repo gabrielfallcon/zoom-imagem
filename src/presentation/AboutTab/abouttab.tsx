@@ -1,14 +1,15 @@
+import { Button } from "@/components/Button/button";
 import { Content } from "@/components/Content/content";
 import Image from "next/image";
-import styles from "./abouttab.module.scss";
-import { FiArrowDownRight } from "react-icons/fi";
-import { Button } from "@/components/Button/button";
 import React from "react";
-import { Footer } from "../Footer/footer";
+import { IconType } from "react-icons";
+import { FiArrowDownRight, FiClipboard, FiEye, FiPlay, FiSettings } from "react-icons/fi";
+import styles from "./abouttab.module.scss";
 
 interface Stage {
   id: string;
   phase?: string;
+  icon: IconType;
   label: string;
   tools: string[];
   variant: "dashed" | "light" | "medium" | "dark" | "accent";
@@ -18,13 +19,15 @@ const stages: Stage[] = [
   {
     id: "plan",
     phase: "Planejamento",
-    label: "Planejamento técnico ",
+    icon: FiClipboard,
+    label: "Planejamento técnico",
     tools: ["Cada projeto é pensado para funcionar na prática"],
     variant: "light",
   },
   {
     id: "prod",
     phase: "Produção",
+    icon: FiSettings,
     label: "Produção própria",
     tools: ["Controle total sobre qualidade, prazo e execução"],
     variant: "medium",
@@ -33,14 +36,16 @@ const stages: Stage[] = [
   {
     id: "exec",
     phase: "Execução",
-    label: "Execução em campo ",
+     icon: FiPlay,
+     label: "Execução em campo",
     tools: ["Equipe preparada para implementar com padrão"],
     variant: "dark",
   },
   {
     id: "acc",
     phase: "Acompanhamento",
-    label: "Monitoramento",
+     icon: FiEye,
+     label: "Acompanhamento",
     tools: ["Monitoramento para garantir qualidade"],
     variant: "accent",
   },
@@ -56,6 +61,7 @@ const Arrow: React.FC = () => (
 );
 
 export default function AboutTab() {
+  
   return (
   
       <Content colorTopPosition="right">
@@ -108,9 +114,13 @@ export default function AboutTab() {
             />
           </div>
         </div>
-
+        <p className={styles.howOperations}>Como operamos</p>
         <div className={styles.contentOperations}>
-          {stages.map((stage, index) => (
+          
+          {stages.map((stage, index) => {
+          const Icon = stage.icon;
+
+          return (
             <React.Fragment key={stage.id}>
               <div className={styles.stageCol}>
                 {stage.phase && (
@@ -119,22 +129,18 @@ export default function AboutTab() {
                 {!stage.phase && <div className={styles.phaseEmpty} />}
 
                 <div className={`${styles.bubble} ${styles[stage.variant]}`}>
-                  <span className={styles.bubbleLabel}>{stage.label}</span>
+                  <span className={styles.bubbleLabel}>
+                    <Icon size={34} />
+                    {stage.label && (
+                      <p className={styles.label}>{stage.label}</p>
+                    )}
+                  </span>
                 </div>
 
                 {stage.tools.length > 0 && (
                   <ul className={styles.tools}>
                     {stage.tools.map((tool, i) => (
-                      <li
-                        key={i}
-                        className={
-                          stage.id === "leads" && tool === "Landing Pages"
-                            ? styles.bold
-                            : ""
-                        }
-                      >
-                        {tool}
-                      </li>
+                      <li key={i}>{tool}</li>
                     ))}
                   </ul>
                 )}
@@ -142,7 +148,8 @@ export default function AboutTab() {
 
               {index < stages.length - 1 && <Arrow />}
             </React.Fragment>
-          ))}
+          );
+          })}
         </div>
       </Content>
     
@@ -150,3 +157,4 @@ export default function AboutTab() {
 }
 
 export { AboutTab };
+

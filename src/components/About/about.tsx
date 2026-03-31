@@ -1,7 +1,7 @@
-import { Footer } from "../../presentation/Footer/footer";
+import AboutTab from "@/presentation/AboutTab/abouttab";
+import { Footer } from "../Footer/footer";
 import styles from "./about.module.scss";
 import AboutHero from "./fragments/abouthero";
-import AboutTab from "@/presentation/AboutTab/abouttab";
 
 export default function About() {
   return (
@@ -16,3 +16,4 @@ export default function About() {
 }
 
 export { About };
+
