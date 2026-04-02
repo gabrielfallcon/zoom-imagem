@@ -9,8 +9,8 @@ import {
   FiSettings,
 } from "react-icons/fi";
 import styles from "./about-tab.module.scss";
-import { ContentTag } from "@/components/content";
-import { ButtonTag } from "@/components/button";
+import ContentTag from "@/components/content/content";
+import ButtonTag from "@/components/button/button";
 
 interface Stage {
   id: string;
