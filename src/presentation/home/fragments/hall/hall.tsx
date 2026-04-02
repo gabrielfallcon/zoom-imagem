@@ -1,8 +1,8 @@
 import { FiArrowDown } from "react-icons/fi";
 
 import styles from "./hall.module.scss";
-import { CenterTag } from "@/components/center";
-import { CheckboxTag } from "@/components/checkbox";
+import CenterTag from "@/components/center/center";
+import CheckboxTag from "@/components/checkbox/checkbox";
 
 const HallComponent = () => {
   const handleScroll = () => {

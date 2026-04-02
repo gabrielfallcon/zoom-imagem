@@ -15,8 +15,8 @@ import {
 } from "react-icons/lu";
 
 import styles from "./about-home.module.scss";
-import { ContentTag } from "@/components/content";
-import { ButtonTag } from "@/components/button";
+import ContentTag from "@/components/content/content";
+import ButtonTag from "@/components/button/button";
 
 const AboutHomeComponent = () => {
   const router = useRouter();
