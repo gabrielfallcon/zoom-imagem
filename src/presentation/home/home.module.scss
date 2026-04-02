@@ -1,0 +1,45 @@
+@use "@/styles/mixins.scss" as *;
+
+.homeWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 16px;
+  position: relative;
+}
+
+.homeBackground {
+  background: url("/images/background.png") center / cover no-repeat;
+  position: absolute;
+  top: -80;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.homeBackground2 {
+  display: none;
+  background: url("/images/backgr-home.jpg") center / cover no-repeat;
+  position: absolute;
+  top: -47;
+  right: -40;
+  width: 50%;
+  height: 500px;
+  z-index: -1;
+  border-radius: 60px;
+  filter: blur(5px);
+  opacity: 12%;
+
+  @include respond-to("l") {
+    display: block;
+  }
+}
+
+.homeBackground::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+}

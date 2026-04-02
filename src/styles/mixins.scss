@@ -1,11 +1,36 @@
-@use 'sass:map';
-@import './variables';
-@import './media-query.scss';
+@use "sass:map";
+// @use "./";
+// @use "./breakpoints.scss";
 
-@mixin media($breakpoint) {
-  $media: map.get($breakpoints, $breakpoint);
+// @mixin media($breakpoint) {
+//   $media: map.get($breakpoints, $breakpoint);
 
-  @media #{inspect($media)} {
-    @content;
+//   @media #{inspect($media)} {
+//     @content;
+//   }
+// }
+// Breakpoints
+$breakpoints: (
+  "xs": 0,
+  // Extra small devices (portrait phones)
+  "sm": 576px,
+  // Small devices (landscape phones)
+  "m": 768px,
+  // Medium devices (tablets)
+  "l": 992px,
+  // Large devices (desktops)
+  "xl": 1200px,
+  // Extra large devices (large desktops)
+  "xxl": 1400px, // Extra extra large devices
+);
+
+@mixin respond-to($breakpoint) {
+  $value: map.get($breakpoints, $breakpoint);
+  @if $value != null {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @error "Breakpoint '#{$breakpoint}' not found in \$breakpoints map.";
   }
 }

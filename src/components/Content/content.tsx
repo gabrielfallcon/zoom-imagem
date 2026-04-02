@@ -1,14 +1,14 @@
 import { PropsWithChildren } from "react";
 import styles from "./content.module.scss";
-import { Center } from "../Center/center";
 import clsx from "clsx";
+import { CenterTag } from "../center";
 
 export interface IContentProps extends PropsWithChildren {
   colorTopPosition?: "left" | "right";
   colorBottomPosition?: "left" | "right";
 }
 
-const Content = ({
+const ContentComponent = ({
   children,
   colorBottomPosition,
   colorTopPosition,
@@ -19,20 +19,20 @@ const Content = ({
         <div
           className={clsx(
             styles.color,
-            colorTopPosition === "left" ? styles.topLeft : styles.topRight
+            colorTopPosition === "left" ? styles.topLeft : styles.topRight,
           )}
         ></div>
       )}
-      <Center>
+      <CenterTag>
         <div className={styles.child}>{children}</div>
-      </Center>
+      </CenterTag>
       {colorBottomPosition && (
         <div
           className={clsx(
             styles.color,
             colorBottomPosition === "left"
               ? styles.bottomLeft
-              : styles.bottomRight
+              : styles.bottomRight,
           )}
         ></div>
       )}
@@ -40,4 +40,4 @@ const Content = ({
   );
 };
 
-export { Content };
+export default ContentComponent;

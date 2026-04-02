@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import "../styles/global.scss"
-import { Header } from "../components/Header/header";
+import "../styles/global.scss";
+import { FooterTag, HeaderTag } from "@/components";
 
 export const metadata: Metadata = {
   title: "Zoom",
@@ -16,14 +16,19 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/images/zoom.svg" />
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body>
-        <Header />
-        
+        <HeaderTag />
+
         {children}
+
+        <FooterTag />
       </body>
     </html>
   );
