@@ -179,6 +179,11 @@
   img {
     width: 100%;
     border-radius: 8px;
+   
+   @include media("l") {
+      height: 360px;
+    }
+    
   }
 
   p {
@@ -212,27 +217,4 @@
       text-transform: uppercase;
     }
   }
-}
-
-.serviceItem:hover {
-  @include media("l") {
-    background-color: #2e303a;
-    padding: 48px 56px;
-  }
-
-  h2 {
-    @include media("l") {
-      font-size: 35px;
-    }
-  }
-
-  p {
-      @include media("l") {
-        font-size: 25px;
-      }
-  }
-
-  .labelCheck {
-      font-size: 15px;
-    }
 }

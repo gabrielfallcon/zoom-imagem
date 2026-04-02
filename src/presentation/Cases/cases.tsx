@@ -8,6 +8,7 @@ import {
 import { Content } from "../../components/Content/content";
 import styles from "./cases.module.scss";
 import { Button } from "../../components/Button/button";
+import { useRouter } from "next/navigation";
 const steps = [
   {
     icon: FiTarget,
@@ -53,6 +54,12 @@ const projects = [
 ];
 
 const Cases = () => {
+
+  const router = useRouter();
+  
+    function handleClick(link: string) {
+      router.push(link);
+    }
   
 
   return (
@@ -112,6 +119,7 @@ const Cases = () => {
             size="lg"
             variant="tertiary"
             icon={<FiArrowDownRight size={24} color="#EE0874" />}
+            onClick={() => handleClick("/contact")}
           />
         </div>
       </div>

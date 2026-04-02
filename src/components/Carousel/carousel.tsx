@@ -6,10 +6,15 @@ const logos = [
   "/images/client-logo/netflix.png",
   "/images/client-logo/amazon.jpg",
   "/images/client-logo/99.png",
+  "/images/client-logo/vivo1.png",
+  "/images/client-logo/heineken.jpg",
+  "/images/client-logo/bk.png",
+  "/images/client-logo/byd.svg",
+  "/images/client-logo/itau.png",
 ];
 
 export default function Carousel() {
-    const repeated = [...logos, ...logos, ...logos, ...logos];
+    const repeated = [...logos, ...logos, ...logos, ...logos, ...logos, ...logos];
 
   return (
     <div className={styles.clientsWrapper}>
@@ -19,8 +24,8 @@ export default function Carousel() {
             <Image
               src={logo}
               alt={`Cliente ${index}`}
-              width={120} 
-              height={120}
+              width={220} 
+              height={220}
               className={styles.clientLogo}
             />
           </div>

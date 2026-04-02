@@ -20,7 +20,7 @@
   height: 100%;
   align-items: center;
   width: fit-content;
-  animation: scroll 20s linear infinite;
+  animation: scroll 120s linear infinite;
   will-change: transform;
 }
 
@@ -40,7 +40,7 @@
 
   @include media("l") {
     width: 140px;
-    height: 100%;
+    height: 140px;
   }
 }
 
