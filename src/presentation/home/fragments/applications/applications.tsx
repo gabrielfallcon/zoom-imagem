@@ -9,7 +9,7 @@ import {
 } from "react-icons/fi";
 import styles from "./applications.module.scss";
 import { IconType } from "react-icons";
-import { ContentTag } from "@/components";
+import { ContentTag } from "@/components/content";
 
 interface AmbienteItem {
   icon: IconType;

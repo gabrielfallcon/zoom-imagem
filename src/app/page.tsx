@@ -1,4 +1,4 @@
-import { HomeTag } from "@/presentation";
+import { HomeTag } from "@/presentation/home";
 import "../styles/global.scss";
 
 export default function Home() {
