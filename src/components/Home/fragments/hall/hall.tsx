@@ -4,6 +4,10 @@ import { Checkbox } from "../../../../components/Checkbox/checkbox";
 import styles from "./hall.module.scss";
 
 const Hall = () => {
+  const handleScroll = () => {
+    const next = document.getElementById("role");
+    next?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <Center>
       <div className={styles.hallWrapper}>
@@ -47,8 +51,10 @@ const Hall = () => {
             </p>
           </div>
 
-          <a href="" className={styles.buttonDown}>
+          <a onClick={() => handleScroll()} className={styles.buttonDown}>
             <FiArrowDown size={40} color="#1E1E1E" />
+            
+
           </a>
         </div>
       </div>

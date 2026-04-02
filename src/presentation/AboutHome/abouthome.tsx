@@ -1,4 +1,5 @@
 import Carousel from "@/components/Carousel/carousel";
+import { useRouter } from "next/navigation";
 import {
   FiArrowDownRight,
   FiCheckCircle,
@@ -15,7 +16,6 @@ import {
 import { Button } from "../../components/Button/button";
 import { Content } from "../../components/Content/content";
 import styles from "./abouthome.module.scss";
-import { useRouter } from "next/navigation";
 
 
 export default function AboutHome() {
@@ -26,6 +26,7 @@ export default function AboutHome() {
     router.push(link);
   }
   return (
+    <div id="role">
     <Content colorBottomPosition="right" colorTopPosition="right">
       <div className={styles.contentPurpose}>
         <span>Aqui, sua marca ganha presença.</span>
@@ -144,6 +145,7 @@ export default function AboutHome() {
         </div>
       </div>
     </Content>
+    </div>
   );
 }
 
