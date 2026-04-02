@@ -5,8 +5,8 @@ import { FiArrowRight } from "react-icons/fi";
 
 import styles from "./jobs.module.scss";
 import { IListServices, listServices } from "./constants/jobs.constants";
-import { ContentTag } from "@/components/content";
-import { CheckboxTag } from "@/components/checkbox";
+import ContentTag from "@/components/content/content";
+import CheckboxTag from "@/components/checkbox/checkbox";
 
 const JobsComponent = () => {
   const [activeService, setActiveService] = useState<IListServices>(
