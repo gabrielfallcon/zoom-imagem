@@ -60,7 +60,6 @@ const Cases = () => {
     function handleClick(link: string) {
       router.push(link);
     }
-  
 
   return (
     <Content colorTopPosition="right">
