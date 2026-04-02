@@ -1,22 +1,30 @@
+import Carousel from "@/components/Carousel/carousel";
 import {
   FiArrowDownRight,
-  FiSettings,
-  FiMap,
   FiCheckCircle,
   FiClock,
+  FiMap,
+  FiSettings,
 } from "react-icons/fi";
-import { Content } from "../../components/Content/content";
-import styles from "./abouthome.module.scss";
-import { Button } from "../../components/Button/button";
-import Carousel from "@/components/Carousel/carousel";
 import {
   LuAward,
   LuBriefcaseBusiness,
   LuMapPinCheck,
   LuWrench,
 } from "react-icons/lu";
+import { Button } from "../../components/Button/button";
+import { Content } from "../../components/Content/content";
+import styles from "./abouthome.module.scss";
+import { useRouter } from "next/navigation";
+
 
 export default function AboutHome() {
+
+  const router = useRouter();
+
+  function handleClick(link: string) {
+    router.push(link);
+  }
   return (
     <Content colorBottomPosition="right" colorTopPosition="right">
       <div className={styles.contentPurpose}>
@@ -130,6 +138,7 @@ export default function AboutHome() {
             label="Entrar em contato"
             size="lg"
             variant="tertiary"
+            onClick={() => handleClick("/contact")}
             icon={<FiArrowDownRight size={24} color="#EE0874" />}
           />
         </div>
@@ -139,3 +148,4 @@ export default function AboutHome() {
 }
 
 export { AboutHome };
+
