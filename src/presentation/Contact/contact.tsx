@@ -2,13 +2,10 @@
 import styles from "./contact.module.scss";
 import { FiInstagram, FiSmartphone, FiMail, FiSend } from "react-icons/fi";
 import Image from "next/image";
-import { Content } from "../../components/Content/content";
-import { Button } from "../../components/Button/button";
 import { useState } from "react";
-import { Footer } from "@/components/Footer/footer";
+import { ButtonTag, ContentTag } from "@/components";
 
-
-export default function Contact() {
+const ContactComponent = () => {
   const subjectOptions = [
     "OOH - Out oh home",
     "PDV - Ponto de venda",
@@ -18,13 +15,13 @@ export default function Contact() {
     "Outros",
   ];
 
-  type data = {
+  type DataType = {
     name: string;
     email: string;
     message: string;
   };
 
-  const [data, setData] = useState<data>({
+  const [data, setData] = useState<DataType>({
     name: "",
     email: "",
     message: "",
@@ -62,7 +59,7 @@ export default function Contact() {
   return (
     <>
       <form onSubmit={handleSubmit} className={styles.contentContact}>
-        <Content colorTopPosition="right">
+        <ContentTag colorTopPosition="right">
           <div className={styles.contentHeader}>
             <p>FALE CONOSCO</p>
             <h2>
@@ -148,7 +145,7 @@ export default function Contact() {
                 </div>
 
                 <div className={styles.submitRow}>
-                  <Button
+                  <ButtonTag
                     className={styles.btnSend}
                     label="Enviar mensagem "
                     size="lg"
@@ -161,20 +158,10 @@ export default function Contact() {
               </div>
             </div>
           </div>
-
-          <div className={styles.contentFooter}>
-            <FiInstagram size={32} color="#ED0874" />
-            <span> @zoomimage </span>
-            <FiSmartphone size={32} color="#ED0874" />
-            <span> (11) 95798-2407 </span>
-            <FiMail size={32} color="#ED0874" />
-            <span> contato@zoom.com </span>
-          </div>
-        </Content>
+        </ContentTag>
       </form>
-      <Footer />
     </>
   );
-}
+};
 
-export { Contact };
+export default ContactComponent;

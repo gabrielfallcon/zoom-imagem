@@ -1,4 +1,4 @@
-@import "../../styles/mixins.scss";
+@use "@/styles/mixins.scss" as *;
 
 .headerWrapper {
   width: 100%;
@@ -20,10 +20,10 @@
   border-radius: 60px;
   position: relative;
   background: #020202;
-  
+
   gap: 64px;
 
-  @include media("l") {
+  @include respond-to("l") {
     display: flex;
   }
 }
@@ -39,7 +39,7 @@
     #f5c518 0%,
     transparent 40%,
     #e6003a 60%,
-    
+
     #f5c518 100%
   );
   -webkit-mask:
@@ -101,7 +101,7 @@
   align-items: center;
   justify-content: space-between;
 
-  @include media("l") {
+  @include respond-to("l") {
     display: none;
   }
 }
@@ -123,7 +123,7 @@
   background: #2c2c2c;
   flex-direction: column;
 
-  @include media("l") {
+  @include respond-to("l") {
     display: none;
   }
 }

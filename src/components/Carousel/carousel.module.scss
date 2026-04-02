@@ -1,4 +1,4 @@
-@import "../../styles/mixins.scss";
+@use "@/styles/mixins.scss" as *;
 
 .clientsWrapper {
   display: none;
@@ -10,7 +10,15 @@
   position: relative;
   margin-bottom: 60px;
 
-  @include media("l") {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 30%,
+    black 90%,
+    transparent
+  );
+
+  @include respond-to("l") {
     display: flex;
   }
 }
@@ -19,41 +27,48 @@
   display: flex;
   height: 100%;
   align-items: center;
-  width: fit-content;
-  animation: scroll 120s linear infinite;
+  width: max-content;
+  // animation: scroll 120s linear infinite;
   will-change: transform;
+  backface-visibility: hidden;
 }
 
 .item {
   flex: 0 0 auto;
   width: 170px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  & > img {
+    height: auto !important;
+  }
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .clientLogo {
-  object-fit: contain;  
+  object-fit: contain;
   filter: grayscale(100%);
   transition: all 0.1s ease;
   border-radius: 16px;
 
-  @include media("l") {
+  @include respond-to("l") {
     width: 140px;
     height: 140px;
   }
 }
 
-.clientLogo:hover {
-  filter: grayscale(0%);
-  transform: scale(1.05);
-}
-
-@keyframes scroll {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(calc(-50%  ), 0, 0);
-  }
-}
+// @keyframes scroll {
+//   from {
+//     transform: translateX(0);
+//   }
+//   to {
+//     transform: translateX(calc(-1 * var(--scroll-width)));
+//   }
+// }

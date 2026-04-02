@@ -6,7 +6,7 @@ import styles from "./header.module.scss";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useRouter } from "next/navigation";
 
-const Header = () => {
+const HeaderComponent = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const clickMenuMobile = () => {
@@ -33,8 +33,8 @@ const Header = () => {
             <li onClick={() => handleClick("/")}>Home</li>
             <li>Soluções</li>
             <li>Projetos</li>
-            <li onClick={() => handleClick("/about")}>Sobre</li>
-            <li onClick={() => handleClick("/contact")}>Fale com a Zoom</li>
+            <li onClick={() => handleClick("/sobre")}>Sobre</li>
+            <li onClick={() => handleClick("/contato")}>Fale com a Zoom</li>
           </ul>
         </header>
 
@@ -76,4 +76,4 @@ const Header = () => {
   );
 };
 
-export { Header };
+export default HeaderComponent;

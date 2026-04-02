@@ -1,4 +1,4 @@
-@import "../../styles/mixins.scss";
+@use "@/styles/mixins.scss" as *;
 
 .button {
   width: 100%;
@@ -20,7 +20,7 @@
   z-index: 20;
   margin: 0 auto;
 
-  @include media("l") {
+  @include respond-to("l") {
     margin: 0;
   }
 }
@@ -70,7 +70,7 @@
 .sizeLg {
   max-width: 327px;
 
-  @include media("l") {
+  @include respond-to("l") {
     max-width: 268px;
     margin: none;
   }

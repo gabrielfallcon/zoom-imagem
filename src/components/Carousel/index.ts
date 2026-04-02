@@ -1,1 +1,1 @@
-export { default as carousel } from "./carousel";
+export { default as CarouselTag } from "./carousel";

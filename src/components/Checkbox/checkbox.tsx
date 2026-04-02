@@ -7,7 +7,11 @@ interface ICheckboxProps {
   onChange: (checked: boolean) => void;
 }
 
-const Checkbox = ({ label, onChange, checked = true }: ICheckboxProps) => {
+const CheckboxComponent = ({
+  label,
+  onChange,
+  checked = true,
+}: ICheckboxProps) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     onChange(event.target.checked);
   };
@@ -27,4 +31,4 @@ const Checkbox = ({ label, onChange, checked = true }: ICheckboxProps) => {
   );
 };
 
-export { Checkbox };
+export default CheckboxComponent;

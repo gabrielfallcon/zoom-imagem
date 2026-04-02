@@ -1,6 +1,6 @@
-import { Home as HomeComponent } from ".././components/Home/home";
+import { HomeTag } from "@/presentation";
 import "../styles/global.scss";
 
 export default function Home() {
-  return <HomeComponent />;
+  return <HomeTag />;
 }

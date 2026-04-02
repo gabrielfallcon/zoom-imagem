@@ -1,12 +1,12 @@
-@import "../../styles/mixins.scss";
+@use "@/styles/mixins.scss" as *;
 
 .contentContact {
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 0 16px 16px 16px;
-  
-  @include media("l") {
+
+  @include respond-to("l") {
     font-size: 16px;
   }
 }
@@ -37,14 +37,14 @@
       font-weight: 600;
     }
 
-    @include media("l") {
+    @include respond-to("l") {
       font-size: 64px;
       line-height: 75px;
       margin-bottom: 64px;
     }
   }
 
-  @include media("l") {
+  @include respond-to("l") {
     padding: 00px 20px;
   }
 }
@@ -52,7 +52,7 @@
 .contentCentral {
   display: flex;
 
-  @include media("l") {
+  @include respond-to("l") {
     gap: 32px;
   }
 }
@@ -60,7 +60,7 @@
 .image {
   display: none;
 
-  @include media("l") {
+  @include respond-to("l") {
     display: block;
     width: 100%;
     height: 100%;
@@ -89,7 +89,7 @@
     color: #8fa3b8;
   }
 
-  @include media("l") {
+  @include respond-to("l") {
     p {
       font-size: 24px;
     }
@@ -158,7 +158,7 @@
     letter-spacing: 0.02em;
   }
 
-  @include media("l") {
+  @include respond-to("l") {
     flex-direction: row;
   }
 }
@@ -189,7 +189,7 @@
   border: none;
   cursor: pointer;
 
-  @include media("l") {
+  @include respond-to("l") {
     max-width: 268px;
     margin: none;
   }
@@ -248,7 +248,7 @@
   padding: 20px 40px;
   flex-wrap: wrap;
 
-  @include media("l") {
+  @include respond-to("l") {
     display: flex;
 
     padding: 20px 24px;
