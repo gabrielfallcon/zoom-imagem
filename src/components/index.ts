@@ -1,7 +1,7 @@
-export * from "./button";
-export * from "./carousel";
-export * from "./center";
-export * from "./footer";
-export * from "./header";
-export * from "./content";
-export * from "./checkbox";
+export { ButtonTag } from "./button/";
+export { CarouselTag } from "./carousel";
+export { CenterTag } from "./center";
+export { FooterTag } from "./footer";
+export { HeaderTag } from "./header";
+export { ContentTag } from "./content";
+export { CheckboxTag } from "./checkbox";
