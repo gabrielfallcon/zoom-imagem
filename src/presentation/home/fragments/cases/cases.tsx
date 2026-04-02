@@ -43,12 +43,12 @@ const projects = [
     image: "/images/process/urbano.png",
   },
   {
-    title: "Metrô - Vila Sônia",
-    image: "/images/process/metro.png",
+    title: "Betano - Especial",
+    image: "/images/process/betano.png",
   },
   {
-    title: "Metrô - Vila Sônia",
-    image: "/images/process/metro.png",
+    title: "Bauducco - Frei Caneca",
+    image: "/images/process/bauducco.png",
   },
 ];
 
