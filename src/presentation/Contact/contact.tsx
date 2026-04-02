@@ -1,9 +1,10 @@
 "use client";
 import styles from "./contact.module.scss";
-import { FiInstagram, FiSmartphone, FiMail, FiSend } from "react-icons/fi";
+import { FiSend } from "react-icons/fi";
 import Image from "next/image";
 import { useState } from "react";
-import { ButtonTag, ContentTag } from "@/components";
+import { ContentTag } from "@/components/content";
+import { ButtonTag } from "@/components/button";
 
 const ContactComponent = () => {
   const subjectOptions = [

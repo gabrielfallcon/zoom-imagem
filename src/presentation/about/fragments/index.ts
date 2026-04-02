@@ -1,2 +1,2 @@
-export * from "./about-hero";
-export * from "./about-tab";
+export { AboutHeroTag } from "./about-hero";
+export { AboutTabTag } from "./about-tab";
