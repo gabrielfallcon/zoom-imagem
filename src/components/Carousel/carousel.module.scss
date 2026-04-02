@@ -19,29 +19,27 @@
   display: flex;
   height: 100%;
   align-items: center;
-  gap: 40px;
   width: fit-content;
   animation: scroll 20s linear infinite;
   will-change: transform;
- 
 }
 
 .item {
   flex: 0 0 auto;
-  width: 220px;
+  width: 170px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .clientLogo {
-  object-fit: contain;
+  object-fit: contain;  
   filter: grayscale(100%);
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
   border-radius: 16px;
 
   @include media("l") {
-    width: 100%;
+    width: 140px;
     height: 100%;
   }
 }
@@ -56,6 +54,6 @@
     transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translate3d(calc(-50% - 20px), 0, 0);
+    transform: translate3d(calc(-50%  ), 0, 0);
   }
 }

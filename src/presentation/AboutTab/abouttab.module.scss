@@ -141,8 +141,8 @@
 
 .bubble {
   width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  height: 260px;
+  border-radius: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -182,19 +182,19 @@
 }
 
 .light {
-  background: #ff87bf;
+  background: #f8395a;
 }
 
 .medium {
-  background: #ff429a;
+  background: #f8395a;
 }
 
 .dark {
-  background: #ff1884;
+  background: #f8395a;
 }
 
 .accent {
-  background: #ee0874;
+  background: #f8395a;
   box-shadow: 0 4px 16px rgba(43, 95, 117, 0.35);
 }
 
