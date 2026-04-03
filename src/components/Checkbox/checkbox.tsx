@@ -7,7 +7,7 @@ interface ICheckboxProps {
   onChange: (checked: boolean) => void;
 }
 
-const CheckboxComponent = ({
+export const CheckboxTag = ({
   label,
   onChange,
   checked = true,
@@ -31,4 +31,4 @@ const CheckboxComponent = ({
   );
 };
 
-export default CheckboxComponent;
+export default CheckboxTag;

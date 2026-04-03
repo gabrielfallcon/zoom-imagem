@@ -7,8 +7,8 @@ import {
 } from "react-icons/fi";
 import styles from "./cases.module.scss";
 import { useRouter } from "next/navigation";
-import ContentTag from "@/components/content/content";
-import ButtonTag from "@/components/button/button";
+import { ButtonTag, ContentTag } from "@/components";
+
 const steps = [
   {
     icon: FiTarget,

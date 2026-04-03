@@ -3,8 +3,7 @@ import styles from "./contact.module.scss";
 import { FiSend } from "react-icons/fi";
 import Image from "next/image";
 import { useState } from "react";
-import ContentTag from "@/components/content/content";
-import ButtonTag from "@/components/button/button";
+import { ButtonTag, ContentTag } from "@/components";
 
 const ContactComponent = () => {
   const subjectOptions = [

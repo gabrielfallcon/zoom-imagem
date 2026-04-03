@@ -4,20 +4,20 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "./carousel.module.scss";
 
-const logos = [
-  "/images/client-logo/santander-branco.png",
-  "/images/client-logo/netflix-branco.png",
-  "/images/client-logo/aws-branco.png",
-  "/images/client-logo/99-branco.png",
-  "/images/client-logo/vivo-branco.png",
-  "/images/client-logo/heineken-branco.png",
-  "/images/client-logo/bk-branco.png",
-  "/images/client-logo/byd-branco.webp",
-  "/images/client-logo/itau-branco.png",
-];
-
-export default function CarouselComponent() {
+export const CarouselTag = () => {
   const trackRef = useRef<HTMLDivElement>(null);
+  
+  const logos = [
+    "/images/client-logo/santander-branco.png",
+    "/images/client-logo/netflix-branco.png",
+    "/images/client-logo/aws-branco.png",
+    "/images/client-logo/99-branco.png",
+    "/images/client-logo/vivo-branco.png",
+    "/images/client-logo/heineken-branco.png",
+    "/images/client-logo/bk-branco.png",
+    "/images/client-logo/byd-branco.webp",
+    "/images/client-logo/itau-branco.png",
+  ];
 
   useEffect(() => {
     const track = trackRef.current;
@@ -56,4 +56,6 @@ export default function CarouselComponent() {
       </div>
     </div>
   );
-}
+};
+
+export default CarouselTag;

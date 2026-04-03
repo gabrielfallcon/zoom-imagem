@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/global.scss";
-import HeaderTag from "@/components/header/header";
-import FooterTag from "@/components/footer/footer";
+import { FooterTag, HeaderTag } from "@/components";
 
 export const metadata: Metadata = {
   title: "Zoom",
