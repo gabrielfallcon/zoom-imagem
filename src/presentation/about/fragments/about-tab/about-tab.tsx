@@ -9,8 +9,7 @@ import {
   FiSettings,
 } from "react-icons/fi";
 import styles from "./about-tab.module.scss";
-import ContentTag from "@/components/content/content";
-import ButtonTag from "@/components/button/button";
+import { ButtonTag, ContentTag } from "@/components";
 
 interface Stage {
   id: string;
@@ -108,7 +107,7 @@ const AboutTabComponent = () => {
             consistente em diferentes regiões do país.
           </p>
 
-          <ButtonTag
+          <ButtonTag 
             className={styles.btn}
             label="Impulsionar meu negócio"
             size="lg"

@@ -1,3 +1,3 @@
 export * from "./about";
-export * from "./contact";
+export * from "./Contact/contact";
 export * from "./home";

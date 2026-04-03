@@ -6,7 +6,7 @@ import styles from "./header.module.scss";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useRouter } from "next/navigation";
 
-const HeaderComponent = () => {
+export const HeaderTag = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const clickMenuMobile = () => {
@@ -76,4 +76,4 @@ const HeaderComponent = () => {
   );
 };
 
-export default HeaderComponent;
+export default HeaderTag;

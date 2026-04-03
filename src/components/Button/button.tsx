@@ -12,7 +12,7 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   load?: boolean;
 }
 
-const ButtonComponent = ({
+export const ButtonTag = ({
   label,
   size,
   variant,
@@ -67,4 +67,4 @@ const ButtonComponent = ({
   );
 };
 
-export default ButtonComponent;
+export default ButtonTag;

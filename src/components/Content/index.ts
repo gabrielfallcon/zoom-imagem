@@ -1,1 +1,1 @@
-export { default as ContentTag } from "./content";
+export { default as ContentTag } from "../Content/content";

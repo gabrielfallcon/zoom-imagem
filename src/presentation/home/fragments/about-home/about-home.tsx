@@ -1,4 +1,3 @@
-import Carousel from "@/components/carousel/carousel";
 import { useRouter } from "next/navigation";
 import {
   FiArrowDownRight,
@@ -15,8 +14,7 @@ import {
 } from "react-icons/lu";
 
 import styles from "./about-home.module.scss";
-import ContentTag from "@/components/content/content";
-import ButtonTag from "@/components/button/button";
+import { ButtonTag, CarouselTag, ContentTag } from "@/components";
 
 const AboutHomeComponent = () => {
   const router = useRouter();
@@ -80,7 +78,7 @@ const AboutHomeComponent = () => {
           </li>
         </ul>
         <h2 className={styles.ourClients}>Nossos clientes</h2>
-        <Carousel />
+        <CarouselTag />
         <div className={styles.weResults}>
           <span>Nossos Resultados</span>
 

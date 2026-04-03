@@ -1,1 +1,1 @@
-export { default as ContactTag } from "./contact";
+export { default as ContactTag } from "../Contact/contact";
