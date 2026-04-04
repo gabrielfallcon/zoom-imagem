@@ -180,7 +180,30 @@ const AboutTabComponent = () => {
         })}
       </div>
 
-      <div className={styles.contentCapacity}></div>
+      <h2 className={styles.subititles}>Capacidade e escala</h2>
+
+      <div className={styles.contentCapacity}>
+        <div className={styles.descriptionCapacity}>
+          <p>
+            Atendemos projetos em diferentes regiões do Brasil, com capacidade
+            de executar campanhas simultâneas mantendo padronização e qualidade.
+          </p>
+
+          <p>
+            Nossa estrutura permite presença consistente, independentemente da
+            escala.
+          </p>
+        </div>
+        <div className={styles.imageCapacityWrapper}>
+          <Image
+            className={styles.imageCapacity}
+            alt="Mapa do Brasil"
+            src="/images/maps.png"
+            width={120}
+            height={120}
+          />
+        </div>
+      </div>
 
       <h2 className={styles.subititles}>DIFERENCIAIS</h2>
       <div className={styles.contentDifferencials}>
