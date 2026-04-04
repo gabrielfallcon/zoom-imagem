@@ -31,8 +31,8 @@ export const HeaderTag = () => {
 
           <ul className={styles.listMenu}>
             <li onClick={() => handleClick("/")}>Home</li>
-            <li>Soluções</li>
-            <li>Projetos</li>
+            <li onClick={() => handleClick("/solucoes")}>Soluções</li>
+            <li onClick={() => handleClick("/portfolio")}>Projetos</li>
             <li onClick={() => handleClick("/sobre")}>Sobre</li>
             <li onClick={() => handleClick("/contato")}>Fale com a Zoom</li>
           </ul>
