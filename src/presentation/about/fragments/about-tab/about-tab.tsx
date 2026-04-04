@@ -1,5 +1,6 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
 import { IconType } from "react-icons";
 import {
   FiArrowDownRight,
@@ -10,6 +11,8 @@ import {
 } from "react-icons/fi";
 import styles from "./about-tab.module.scss";
 import { ButtonTag, ContentTag } from "@/components";
+import { Gauge, Layers, ShieldCheck, Target } from "lucide-react";
+import React from "react";
 
 interface Stage {
   id: string;
@@ -17,7 +20,7 @@ interface Stage {
   icon: IconType;
   label: string;
   tools: string[];
-  variant: "dashed" | "light" | "medium" | "dark" | "accent";
+  color: "bubleColor";
 }
 
 const stages: Stage[] = [
@@ -27,7 +30,7 @@ const stages: Stage[] = [
     icon: FiClipboard,
     label: "Planejamento técnico",
     tools: ["Cada projeto é pensado para funcionar na prática"],
-    variant: "light",
+    color: "bubleColor",
   },
   {
     id: "prod",
@@ -35,7 +38,7 @@ const stages: Stage[] = [
     icon: FiSettings,
     label: "Produção própria",
     tools: ["Controle total sobre qualidade, prazo e execução"],
-    variant: "medium",
+    color: "bubleColor",
   },
 
   {
@@ -44,7 +47,7 @@ const stages: Stage[] = [
     icon: FiPlay,
     label: "Execução em campo",
     tools: ["Equipe preparada para implementar com padrão"],
-    variant: "dark",
+    color: "bubleColor",
   },
   {
     id: "acc",
@@ -52,7 +55,7 @@ const stages: Stage[] = [
     icon: FiEye,
     label: "Acompanhamento",
     tools: ["Monitoramento para garantir qualidade"],
-    variant: "accent",
+    color: "bubleColor",
   },
 ];
 
@@ -64,6 +67,29 @@ const Arrow: React.FC = () => (
     <span className={styles.arrowHead} />
   </div>
 );
+
+const features = [
+  {
+    icon: ShieldCheck,
+    title: "Execução real",
+    description: "Não dependemos de terceiros.",
+  },
+  {
+    icon: Layers,
+    title: "Consistência",
+    description: "Entrega padronizada.",
+  },
+  {
+    icon: Gauge,
+    title: "Agilidade com controle ",
+    description: "Velocidade com qualidade.",
+  },
+  {
+    icon: Target,
+    title: "Visão prática ",
+    description: "Projetos pensados para funcionar.",
+  },
+];
 
 const AboutTabComponent = () => {
   return (
@@ -107,16 +133,17 @@ const AboutTabComponent = () => {
             consistente em diferentes regiões do país.
           </p>
 
-          <ButtonTag 
+          <ButtonTag
+            variant="primary"
             className={styles.btn}
             label="Impulsionar meu negócio"
             size="lg"
-            variant="primary"
+            color="primary"
             icon={<FiArrowDownRight size={24} color="#0C1132" />}
           />
         </div>
       </div>
-      <h2 className={styles.howOperations}>Como operamos</h2>
+      <h2 className={styles.subititles}>Como operamos</h2>
       <div className={styles.contentOperations}>
         {stages.map((stage, index) => {
           const Icon = stage.icon;
@@ -129,7 +156,7 @@ const AboutTabComponent = () => {
                 )}
                 {!stage.phase && <div className={styles.phaseEmpty} />}
 
-                <div className={`${styles.bubble} ${styles[stage.variant]}`}>
+                <div className={`${styles.bubble} ${styles[stage.color]}`}>
                   <span className={styles.bubbleLabel}>
                     <Icon size={34} />
                     {stage.label && (
@@ -151,6 +178,30 @@ const AboutTabComponent = () => {
             </React.Fragment>
           );
         })}
+      </div>
+
+      <div className={styles.contentCapacity}></div>
+
+      <h2 className={styles.subititles}>DIFERENCIAIS</h2>
+      <div className={styles.contentDifferencials}>
+        <div className={styles.ImageWrapper}>
+          <div className={styles.imageCard} />
+          <div className={`${styles.imageCard} ${styles.imageCardOffset}`} />
+        </div>
+
+        <div className={styles.contentFeatures}>
+          {features.map(({ icon: Icon, title, description }) => (
+            <div key={title} className={styles.featureItem}>
+              <div className={styles.featureIcon}>
+                <Icon size={20} />
+              </div>
+              <div className={styles.featureText}>
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </ContentTag>
   );

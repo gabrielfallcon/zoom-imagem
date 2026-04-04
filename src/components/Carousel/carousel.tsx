@@ -24,7 +24,7 @@ export const CarouselTag = () => {
     if (!track) return;
 
     let position = 0;
-    const speed = 0.5; // velocidade (ajusta aqui)
+    const speed = 0.5; 
 
     const animate = () => {
       position -= speed;
