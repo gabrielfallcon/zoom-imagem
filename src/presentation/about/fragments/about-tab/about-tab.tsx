@@ -10,9 +10,10 @@ import {
   FiSettings,
 } from "react-icons/fi";
 import styles from "./about-tab.module.scss";
-import { ButtonTag, ContentTag } from "@/components";
+import { ButtonTag, CarouselTag, ContentTag } from "@/components";
 import { Gauge, Layers, ShieldCheck, Target } from "lucide-react";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 interface Stage {
   id: string;
@@ -91,9 +92,57 @@ const features = [
   },
 ];
 
+const clientsMobile = [
+  {
+    name: "byd",
+    src: "/images/client-logo/byd-branco.webp",
+  },
+  {
+    name: "99",
+    src: "/images/client-logo/99-branco.png",
+  },
+  {
+    name: "aws",
+    src: "/images/client-logo/aws-branco.png",
+  },
+  {
+    name: "heineken",
+    src: "/images/client-logo/heineken-branco.png",
+  },
+  {
+    name: "itau",
+    src: "/images/client-logo/itau-branco.png",
+  },
+  {
+    name: "santander",
+    src: "/images/client-logo/santander-branco.png",
+  },
+  {
+    name: "netflix",
+    src: "/images/client-logo/netflix-branco.png",
+  },
+  {
+    name: "vivo",
+    src: "/images/client-logo/vivo-branco.png",
+  },
+  {
+    name: "bk",
+    src: "/images/client-logo/bk-branco.png",
+  },
+  {
+    name: "disney",
+    src: "/images/client-logo/disney3.jpg",
+  },
+];
+
 const AboutTabComponent = () => {
+  const router = useRouter();
+
+  function handleClick(link: string) {
+    router.push(link);
+  }
   return (
-    <ContentTag colorTopPosition="right">
+    <ContentTag colorTopPosition="right" colorBottomPosition="left">
       <div className={styles.contentAbout}>
         <Image
           alt="Sobre nós"
@@ -144,6 +193,7 @@ const AboutTabComponent = () => {
         </div>
       </div>
       <h2 className={styles.subititles}>Como operamos</h2>
+
       <div className={styles.contentOperations}>
         {stages.map((stage, index) => {
           const Icon = stage.icon;
@@ -206,6 +256,7 @@ const AboutTabComponent = () => {
       </div>
 
       <h2 className={styles.subititles}>DIFERENCIAIS</h2>
+
       <div className={styles.contentDifferencials}>
         <div className={styles.ImageWrapper}>
           <div className={styles.imageCard} />
@@ -224,6 +275,47 @@ const AboutTabComponent = () => {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      <p className={styles.subititles}>
+        Atuamos com marcas de diferentes segmentos, com foco em execução
+        consistente
+      </p>
+
+      <div className={styles.ourClientsMobile}>
+        {clientsMobile.map((client) => (
+          <div key={client.name}>
+            <Image
+              src={client.src}
+              alt={client.name}
+              width={120}
+              height={60}
+              style={{ objectFit: "contain" }}
+            />
+          </div>
+        ))}
+      </div>
+
+      <CarouselTag />
+
+      <div className={styles.contentCopy}>
+        <h3> Se a sua marca precisa de execução, a gente resolve. </h3>
+
+        <div className={styles.copyDescription}>
+          <p>
+            Fale com uma equipe especializada em produção de{" "}
+            <strong>OOH, PDV e projetos especiais </strong>e leve sua marca para
+            os principais pontos de contato com o público.
+          </p>
+
+          <ButtonTag
+            label="Falar com a Zoom"
+            size="lg"
+            variant="tertiary"
+            icon={<FiArrowDownRight size={24} color="#EE0874" />}
+            onClick={() => handleClick("/contato")}
+          />
         </div>
       </div>
     </ContentTag>
