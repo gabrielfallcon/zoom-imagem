@@ -168,18 +168,19 @@
 .dropItem {
   position: relative;
   height: 52px;
-  display: flex;
   align-items: center;
   padding: 0 24px;
   font-size: 18px;
   color: #ffffff;
   font-weight: 400;
+  text-align: center;
 }
 
 .dropMenu {
   position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
+  top: calc(100%);
+  left: calc(0);
+  right: calc(0);
   background: #020202;
   border-radius: 12px;
   padding: 8px 0;
@@ -192,6 +193,11 @@
     padding: 0 16px;
     font-size: 16px;
     width: 100%;
+    text-align: center;
+
+    @include respond-to("l") {
+      text-align: left;
+    }
 
     &:hover {
       background: rgba(#535353, 0.2);

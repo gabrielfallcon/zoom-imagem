@@ -24,6 +24,7 @@ export const HeaderTag = () => {
 
   function handleClick(link: string) {
     router.push(link);
+    setMenuOpen(!menuOpen);
   }
 
   const dropRef = useRef<HTMLLIElement>(null);
@@ -53,15 +54,17 @@ export const HeaderTag = () => {
             <li className={styles.listMenuLi} onClick={() => handleClick("/")}>
               Home
             </li>
-            <li className={styles.dropItem} ref={dropRef} onClick={handleDrop}>
-              SOLUÇÕES
+            <li className={styles.listMenuLi}  ref={dropRef} onClick={handleDrop}>
+              Soluções
               {dropOpen && (
                 <ul className={styles.dropMenu}>
                   {solucoes.map((s) => (
                     <li key={s.slug}>
                       <Link
                         href={`/solucoes/${s.slug}`}
-                        onClick={() => setDropOpen(false)}
+                        onClick={() => {
+                          setDropOpen(false);
+                        }}
                       >
                         {s.label}
                       </Link>
@@ -118,7 +121,28 @@ export const HeaderTag = () => {
 
           <ul className={styles.listMenuMobile}>
             <li onClick={() => handleClick("/")}>Home</li>
-            <li onClick={() => handleClick("/solucoes")}>Soluções</li>
+            <li className={styles.dropItem} ref={dropRef} onClick={handleDrop}>
+              SOLUÇÕES
+              {dropOpen && (
+                <ul className={styles.dropMenu}>
+                  {solucoes.map((s) => (
+                    <li
+                      key={s.slug}
+                      onClick={() => {
+                        setMenuOpen(!menuOpen);
+                      }}
+                    >
+                      <Link
+                        href={`/solucoes/${s.slug}`}
+                        onClick={() => setDropOpen(false)}
+                      >
+                        {s.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
             <li onClick={() => handleClick("/portfolio")}>Projetos</li>
             <li onClick={() => handleClick("/sobre")}>Sobre</li>
             <li onClick={() => handleClick("/contato")}>Fale com a Zoom</li>
