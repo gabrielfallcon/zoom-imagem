@@ -18,6 +18,7 @@ export const HeaderTag = () => {
   function handleClick(link: string) {
     router.push(link);
   }
+
   return (
     <>
       <div className={styles.headerWrapper}>
@@ -64,11 +65,11 @@ export const HeaderTag = () => {
           </div>
 
           <ul className={styles.listMenuMobile}>
-            <li>Home</li>
-            <li>Soluções</li>
-            <li>Projetos</li>
-            <li>Sobre</li>
-            <li>Fale com a Zoom</li>
+            <li onClick={() => handleClick("/")}>Home</li>
+            <li onClick={() => handleClick("/solucoes")}>Soluções</li>
+            <li onClick={() => handleClick("/portfolio")}>Projetos</li>
+            <li onClick={() => handleClick("/sobre")}>Sobre</li>
+            <li onClick={() => handleClick("/contato")}>Fale com a Zoom</li>
           </ul>
         </div>
       )}

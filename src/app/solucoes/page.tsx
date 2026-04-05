@@ -1,4 +1,4 @@
-import { SolutionsComponent } from "@/presentation/solutions/solutions";
+import { SolutionsComponent } from "@/presentation/solutions/fragments/ooh/ooh";
 import "../../styles/global.scss";
 
 export default function Solutions() {
