@@ -3,7 +3,7 @@ import { OohHall } from "./hall";
 import styles from "./ooh.module.scss";
 import { OohDescription } from "./description";
 
-export const SolutionsComponent = () => {
+export const OohComponent = () => {
   return (
     <div className={styles.oohWrapper}>
       <ContentTag colorTopPosition="left">
@@ -16,4 +16,4 @@ export const SolutionsComponent = () => {
   );
 };
 
-export default SolutionsComponent;
+export default OohComponent;
