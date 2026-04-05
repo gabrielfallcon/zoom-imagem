@@ -74,15 +74,6 @@ $bp-lg: 1024px;
   height: 360px;
 }
 
-// ===================== o que é OOH
-
-.contentWhat {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 64px;
-}
-
 .textBlock {
   max-width: 650px;
 
@@ -94,14 +85,31 @@ $bp-lg: 1024px;
   }
 }
 
+// ===================== o que é OOH
+
+.contentWhat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 64px;
+
+  @include respond-to("l") {
+    flex-direction: row;
+  }
+}
+
 // ====================== atuação
 
 .contentAtuation {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap-reverse;
   justify-content: space-between;
-  text-align: right;
   margin-bottom: 64px;
+
+  @include respond-to("l") {
+    flex-direction: row;
+    text-align: right;
+  }
 }
 
 // =================== tipos de ooh
