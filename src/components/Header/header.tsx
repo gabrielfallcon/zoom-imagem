@@ -50,9 +50,11 @@ export const HeaderTag = () => {
           />
 
           <ul className={styles.listMenu}>
-            <li onClick={() => handleClick("/")}>Home</li>
+            <li className={styles.listMenuLi} onClick={() => handleClick("/")}>
+              Home
+            </li>
             <li className={styles.dropItem} ref={dropRef} onClick={handleDrop}>
-              <span>Soluções</span>
+              SOLUÇÕES
               {dropOpen && (
                 <ul className={styles.dropMenu}>
                   {solucoes.map((s) => (
@@ -68,9 +70,24 @@ export const HeaderTag = () => {
                 </ul>
               )}
             </li>
-            <li onClick={() => handleClick("/portfolio")}>Projetos</li>
-            <li onClick={() => handleClick("/sobre")}>Sobre</li>
-            <li onClick={() => handleClick("/contato")}>Fale com a Zoom</li>
+            <li
+              className={styles.listMenuLi}
+              onClick={() => handleClick("/portfolio")}
+            >
+              Projetos
+            </li>
+            <li
+              className={styles.listMenuLi}
+              onClick={() => handleClick("/sobre")}
+            >
+              Sobre
+            </li>
+            <li
+              className={styles.listMenuLi}
+              onClick={() => handleClick("/contato")}
+            >
+              Fale com a Zoom
+            </li>
           </ul>
         </header>
 

@@ -75,7 +75,7 @@
   left: -24px;
 }
 
-.listMenu li {
+.listMenuLi {
   height: 52px;
   display: flex;
   align-items: center;
@@ -90,7 +90,6 @@
   background: rgba($color: #535353, $alpha: 0.2);
   border-radius: 999px;
   cursor: pointer;
-  height: 52px;
   align-items: center;
 }
 
@@ -168,6 +167,13 @@
 
 .dropItem {
   position: relative;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 400;
 }
 
 .dropMenu {
@@ -180,11 +186,10 @@
   min-width: 180px;
   z-index: 99;
   flex-direction: column;
-  gap: 0;
 
   li {
-    height: 44px;
-    padding: 0 20px;
+    height: 42px;
+    padding: 0 16px;
     font-size: 16px;
     width: 100%;
 
