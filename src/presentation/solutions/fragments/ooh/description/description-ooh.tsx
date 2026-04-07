@@ -1,6 +1,9 @@
 "use client";
 
+import { ButtonTag } from "@/components";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { FiArrowRight } from "react-icons/fi";
 import styles from "./description-ooh.module.scss";
 
 const oohTypes = [
@@ -49,7 +52,48 @@ const steps = [
   },
 ];
 
+const cities = ["São Paulo - SP", "Rio de Janeiro - RJ", "Belo Horizonte - MG", "Fortaleza - CE", "Curitiba - PR"]
+
+const projects = [
+  {
+    brand: "Marca A",
+    type: "Outdoor 14×4",
+    img: "/images/senna.jpg",
+  },
+  {
+    brand: "Marca B",
+    type: "Frontlight",
+    img: "/images/senna.jpg",
+  },
+  {
+    brand: "Marca C",
+    type: "Mobiliário Urbano",
+    img: "/images/senna.jpg",
+  },
+  {
+    brand: "Marca D",
+    type: "Painel Especial",
+    img: "/images/senna.jpg",
+  },
+  {
+    brand: "Marca E",
+    type: "Outdoor 14×4",
+    img: "/images/senna.jpg",
+  },
+  {
+    brand: "Marca F",
+    type: "Projeto Especial",
+    img: "/images/senna.jpg",
+  },
+];
+
+
 export const OohDescription = () => {
+  const router = useRouter();
+  
+    function handleClick(link: string) {
+      router.push(link);
+    }
   return (
     <>
       {/* O que é OOH */}
@@ -129,8 +173,8 @@ export const OohDescription = () => {
       </section>
 
       {/* Como funciona */}
-      <section id="como-funciona" className={styles.sectionModal}>
-        <div className={styles.container}>
+      <section  className={styles.sectionModal}>
+        <div className={styles.contentHow}>
           <div className={styles.sectionHeader}>
             <h3>Processo</h3>
             <h2 className={styles.titleLight}>
@@ -148,6 +192,89 @@ export const OohDescription = () => {
           </div>
         </div>
       </section>
+
+       <section className={styles.sectionModal}>
+        <div className={styles.contentRange}>
+          <div className={styles.sectionHeader}>
+            <h3>Alcance</h3>
+            <h2 className={styles.titleLight}>Execução de OOH em todo o Brasil</h2>
+            <p>
+              Atendemos projetos em diferentes regiões do Brasil, garantindo
+              padronização, controle e eficiência mesmo em campanhas de grande
+              escala.
+            </p>
+            <p>
+              Nossa estrutura permite executar ações simultâneas em múltiplas
+              cidades com consistência.
+            </p>
+          </div>
+          <div className={styles.citiesBlock}>
+            {cities.map((c) => (
+              <span key={c} className={styles.cityTag}>
+                {c}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projetos */}
+      <section className={styles.sectionModal}>
+        <div className={styles.contentProjects}>
+          <div className={styles.sectionHeader}>
+            <h3>Portfólio</h3>
+            <h2>Projetos de OOH executados</h2>
+          </div>
+          <div className={styles.projectsGrid}>
+            {projects.map((p) => (
+              <div key={p.brand} className={styles.projectCard}>
+                <Image
+                  src={p.img}
+                  alt={`Projeto OOH – ${p.brand}`}
+                  fill
+                  className={styles.projectImage}
+                />
+                <div className={styles.projectOverlay}>
+                  <p className={styles.projectBrand}>{p.brand}</p>
+                  <p className={styles.projectType}>{p.type}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Final */}
+      {/* <section id="contato" className={styles.sectionCta}>
+        <div className={styles.ctaInner}>
+          <SectionLabel>Vamos trabalhar juntos</SectionLabel>
+          <h2>
+            Sua marca precisa estar nas ruas —{" "}
+            <span className={styles.heroHighlight}>do jeito certo.</span>
+          </h2>
+          <p>
+            Fale com uma equipe especializada em produção e execução de OOH e
+            leve sua marca para os principais pontos de visibilidade.
+          </p>
+          <a
+            href="https://wa.me/5511999999999"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.btnPrimary}
+          >
+            Falar com a Zoom
+          </a>
+        </div>
+      </section> */}
+      <div className={styles.btnMore}>
+    <ButtonTag 
+                label="Ver mais projetos"
+                size="lg"
+                variant="glass"
+                icon={<FiArrowRight size={24} color="#EE0874" />}
+                onClick={() => handleClick("/portfolio")}
+              />
+              </div>
     </>
   );
 };
