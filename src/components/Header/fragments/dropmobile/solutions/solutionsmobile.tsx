@@ -1,17 +1,21 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import styles from "./solutionsmobile.module.scss";
-import Link from "next/link";
 import { solucoes } from "@/lib/solucoes/solucoes";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 import { FiX } from "react-icons/fi";
+import styles from "./solutionsmobile.module.scss";
 
-export const DropSolutionsMobile = () => {
+type Props = {
+  onClose: () => void;
+};
+
+export const DropSolutionsMobile = ({ onClose }: Props) => {
   const [menuDropOpen, setMenuDropOpen] = useState(true);
 
   const clickMenuMobile = () => {
-    setMenuDropOpen(!menuDropOpen);
+    setMenuDropOpen(prev => !prev);
   };
   return (
     <>
@@ -33,7 +37,7 @@ export const DropSolutionsMobile = () => {
             <li className={styles.dropItem}>
               <ul>
                 {solucoes.map((s) => (
-                  <li onClick={clickMenuMobile} key={s.slug}>
+                  <li onClick={onClose} key={s.slug}>
                     <Link href={`/solucoes/${s.slug}`}>{s.label}</Link>
                   </li>
                 ))}

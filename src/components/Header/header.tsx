@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
-import styles from "./header.module.scss";
-import { FiMenu, FiX } from "react-icons/fi";
-import { useRouter } from "next/navigation";
 import { solucoes } from "@/lib/solucoes/solucoes";
+import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
 import { DropSolutionsMobile } from "./fragments/dropmobile/solutions";
+import styles from "./header.module.scss";
 
 export const HeaderTag = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,18 +15,18 @@ export const HeaderTag = () => {
   const [solutionsMenu, setSolutionsMenu] = useState(false);
 
   const clickMenuMobile = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen(prev => !prev);
   };
 
   const handleDrop = () => {
-    setDropOpen(!dropOpen);
+    setDropOpen(prev => !prev);
   };
 
   const router = useRouter();
 
   function handleClick(link: string) {
     router.push(link);
-    setMenuOpen(!menuOpen);
+    setMenuOpen(prev => !prev);
   }
 
   const dropRef = useRef<HTMLLIElement>(null);
@@ -41,6 +41,9 @@ export const HeaderTag = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  console.log("menuOpen: ",menuOpen)
+  console.log("dropOpen: ",dropOpen)
+  console.log("solutionsMenu: ",solutionsMenu)
   return (
     <>
       <div className={styles.headerWrapper}>
@@ -65,12 +68,9 @@ export const HeaderTag = () => {
               {dropOpen && (
                 <ul className={styles.dropMenu}>
                   {solucoes.map((s) => (
-                    <li key={s.slug}>
+                    <li onClick={handleDrop} key={s.slug}>
                       <Link
                         href={`/solucoes/${s.slug}`}
-                        onClick={() => {
-                          setDropOpen(false);
-                        }}
                       >
                         {s.label}
                       </Link>
@@ -129,9 +129,8 @@ export const HeaderTag = () => {
             <li onClick={() => handleClick("/")}>Home</li>
             <li
               onClick={() => {
-                setSolutionsMenu(!solutionsMenu);
-
-                setMenuOpen(!menuOpen);
+                setSolutionsMenu(true);
+                setMenuOpen(false);
               }}
             >
               Soluções
@@ -141,9 +140,12 @@ export const HeaderTag = () => {
             <li onClick={() => handleClick("/contato")}>Fale com a Zoom</li>
           </ul>
         </div>
+        
       )}
 
-      {solutionsMenu && <DropSolutionsMobile />}
+      {solutionsMenu && (
+  <DropSolutionsMobile onClose={() => setSolutionsMenu(false)} />
+)}
     </>
   );
 };
