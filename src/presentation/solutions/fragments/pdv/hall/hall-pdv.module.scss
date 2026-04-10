@@ -1,0 +1,66 @@
+@use "@/styles/mixins.scss" as *; 
+
+$pink: #ee0874;
+$bg: #0d101b;
+$border: #c4c4c4;
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include respond-to("l") {
+    width: 100%;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: center;
+      justify-content: space-between;
+
+  }
+}
+
+// ── Esquerda ─────────────────────────────────────────────────
+.hero__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.hero__text {
+  font-size: 0.95rem;
+  color: rgba(#fff, 0.5);
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+// ── Direita ───────────────────────────────────────────────────
+.hero__right {
+  flex: 1;
+  width: 100%;
+
+  @include respond-to("l") {
+    max-width: 560px;
+  }
+}
+
+.hero__imgWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(#fff, 0.04);
+}
+
+.hero__img {
+  object-fit: cover;
+}
