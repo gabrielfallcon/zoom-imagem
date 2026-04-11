@@ -2,6 +2,7 @@
 
 import { OohComponent } from "@/presentation";
 import { PdvComponent } from "@/presentation/solutions/fragments/pdv";
+import { ProjectsComponent } from "@/presentation/solutions/fragments/projects";
 import { ComponentType } from "react";
 
 type Solucao = {
@@ -20,7 +21,7 @@ export const solucoes: Solucao[] = [
   {
     label: "Projetos especiais",
     slug: "projetos-especiais",
-    component: OohComponent,
+    component: ProjectsComponent,
   },
   { label: "Linha ECO", slug: "linha-eco", component: PdvComponent },
 ];

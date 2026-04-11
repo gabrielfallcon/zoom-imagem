@@ -18,7 +18,7 @@ export const PdvComponent = () => {
         <PdvHall />
       </ContentTag>
       <ContentTag colorTopPosition="right" colorBottomPosition="left">
-        {/* <PdvDescription /> */}
+        <PdvDescription />
       </ContentTag>
     </div>
     </>

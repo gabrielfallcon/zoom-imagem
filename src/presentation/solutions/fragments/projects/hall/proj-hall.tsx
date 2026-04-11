@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import styles from "./hall-pdv.module.scss";
+import styles from "./proj-hall.module.scss";
 import { ButtonTag } from "@/components";
 import { FiArrowRight } from "react-icons/fi";
 import { useRouter } from "next/navigation";
 
-export default function PdvHall() {
+export default function ProjHall() {
   const router = useRouter();
 
   function handleClick(link: string) {
@@ -17,17 +17,14 @@ export default function PdvHall() {
       <div className={styles.heroContainer}>
         <div className={styles.hero__left}>
           <h1 className={styles.hero__title}>
-            Sua marca precisa estar presente no ponto de venda.
+            Projetos especiais de comunicação para marcas que precisam ir além
+            do padrão.
           </h1>
           <p className={styles.hero__text}>
-            Materiais de PDV bem executados destacam produtos, reforçam a marca
-            e influenciam diretamente a decisão de compra.
+            Desenvolvemos e executamos projetos personalizados que geram
+            impacto, diferenciação e presença real para sua marca.
           </p>
-          <p className={styles.hero__text}>
-            A Zoom atua na produção de displays, totens, wobblers, faixas e
-            estruturas promocionais, garantindo qualidade, padronização e
-            impacto em escala.
-          </p>
+         
         </div>
 
         <div className={styles.hero__right}>
