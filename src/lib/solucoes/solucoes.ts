@@ -1,6 +1,7 @@
 // lib/solucoes/solucoes.ts
 
 import { OohComponent } from "@/presentation";
+import EcoComponent from "@/presentation/solutions/fragments/eco/eco";
 import { PdvComponent } from "@/presentation/solutions/fragments/pdv";
 import { ProjectsComponent } from "@/presentation/solutions/fragments/projects";
 import { ComponentType } from "react";
@@ -23,5 +24,5 @@ export const solucoes: Solucao[] = [
     slug: "projetos-especiais",
     component: ProjectsComponent,
   },
-  { label: "Linha ECO", slug: "linha-eco", component: PdvComponent },
+  { label: "Linha ECO", slug: "linha-eco", component: EcoComponent },
 ];

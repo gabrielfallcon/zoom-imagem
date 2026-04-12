@@ -29,6 +29,16 @@
   color: #0c1132;
 }
 
+.ecoglass {
+  background: linear-gradient(225deg, #3e5f44 0%, #111d13 100%);
+  color: #e5e6fa;
+
+  &:hover {
+    background: linear-gradient(225deg, #3e5f44 20%, #111d13 80%);
+    color: #e5e6fa;
+  }
+}
+
 .secondary {
   border: 3px solid #b6f09c;
   background-color: #1a1d21;

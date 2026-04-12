@@ -5,7 +5,13 @@ import Image from "next/image";
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
-  variant: "primary" | "secondary" | "tertiary" | "glass" | "ghost";
+  variant:
+    | "primary"
+    | "secondary"
+    | "tertiary"
+    | "glass"
+    | "ghost"
+    | "ecoglass";
   size: "sm" | "md" | "lg";
   icon?: ReactNode;
   onClick?: () => void;
@@ -33,6 +39,8 @@ export const ButtonTag = ({
         return styles.glass;
       case "ghost":
         return styles.ghost;
+      case "ecoglass":
+        return styles.ecoglass;
       default:
         return styles.default;
     }

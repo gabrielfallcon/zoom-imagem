@@ -1,0 +1,1 @@
+export { default as OohDescription } from "./eco-desc";
