@@ -92,6 +92,13 @@
     font-weight: 500;
   }
 }
+.ctaButtons{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
 
 .boxInfo {
   display: flex;

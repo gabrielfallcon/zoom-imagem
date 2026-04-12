@@ -1,13 +1,19 @@
 import { FiArrowDown } from "react-icons/fi";
 
 import styles from "./hall.module.scss";
-import {CenterTag, CheckboxTag} from "@/components";
+import { ButtonTag, CenterTag } from "@/components";
+import { useRouter } from "next/navigation";
 
 const HallComponent = () => {
   const handleScroll = () => {
     const next = document.getElementById("role");
     next?.scrollIntoView({ behavior: "smooth" });
   };
+  const router = useRouter();
+
+  function handleClick(link: string) {
+    router.push(link);
+  }
   return (
     <CenterTag>
       <div className={styles.hallWrapper}>
@@ -26,7 +32,23 @@ const HallComponent = () => {
           mundo real — com impacto, consistência e controle em cada etapa
         </p>
 
-        <ul className={styles.listServicesDektop}>
+        <div className={styles.ctaButtons}>
+          <ButtonTag
+            label="Falar com a Zoom"
+            size="lg"
+            variant="glass"
+            onClick={() => handleClick("/contato")}
+          />
+
+          <ButtonTag
+            label="Ver projetos"
+            size="lg"
+            variant="glass"
+            onClick={() => handleClick("/portfolio")}
+          />
+        </div>
+
+        {/* <ul className={styles.listServicesDektop}>
           <li>
             <CheckboxTag
               label={
@@ -41,7 +63,7 @@ const HallComponent = () => {
               onChange={function () {}}
             />{" "}
           </li>
-        </ul>
+        </ul> */}
 
         <div className={styles.boxInfo}>
           <div className={styles.hallContentDescriptionDesktop}>
