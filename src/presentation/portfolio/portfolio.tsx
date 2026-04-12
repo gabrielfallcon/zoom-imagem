@@ -1,10 +1,14 @@
+import { ContentTag } from "@/components";
+import Projects from "./fragments/projects/projects";
 import styles from "./portfolio.module.scss";
 
 export const PortfolioComponent = () => {
   return (
-    <>
-      <div className={styles.portfolioWrapper}></div>
-    </>
+    <div className={styles.portfolioWrapper}>
+      <ContentTag>
+        <Projects />
+      </ContentTag>
+    </div>
   );
 };
 
