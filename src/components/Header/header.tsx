@@ -15,18 +15,18 @@ export const HeaderTag = () => {
   const [solutionsMenu, setSolutionsMenu] = useState(false);
 
   const clickMenuMobile = () => {
-    setMenuOpen(prev => !prev);
+    setMenuOpen((prev) => !prev);
   };
 
   const handleDrop = () => {
-    setDropOpen(prev => !prev);
+    setDropOpen((prev) => !prev);
   };
 
   const router = useRouter();
 
   function handleClick(link: string) {
     router.push(link);
-    setMenuOpen(prev => !prev);
+    setMenuOpen((prev) => !prev);
   }
 
   const dropRef = useRef<HTMLLIElement>(null);
@@ -41,9 +41,6 @@ export const HeaderTag = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  console.log("menuOpen: ",menuOpen)
-  console.log("dropOpen: ",dropOpen)
-  console.log("solutionsMenu: ",solutionsMenu)
   return (
     <>
       <div className={styles.headerWrapper}>
@@ -68,12 +65,8 @@ export const HeaderTag = () => {
               {dropOpen && (
                 <ul className={styles.dropMenu}>
                   {solucoes.map((s) => (
-                    <li onClick={handleDrop} key={s.slug}>
-                      <Link
-                        href={`/solucoes/${s.slug}`}
-                      >
-                        {s.label}
-                      </Link>
+                    <li onClick={() => setMenuOpen(false)} key={s.slug}>
+                      <Link href={`/solucoes/${s.slug}`}>{s.label}</Link>
                     </li>
                   ))}
                 </ul>
@@ -140,12 +133,11 @@ export const HeaderTag = () => {
             <li onClick={() => handleClick("/contato")}>Fale com a Zoom</li>
           </ul>
         </div>
-        
       )}
 
       {solutionsMenu && (
-  <DropSolutionsMobile onClose={() => setSolutionsMenu(false)} />
-)}
+        <DropSolutionsMobile onClose={() => setSolutionsMenu(false)} />
+      )}
     </>
   );
 };
