@@ -59,6 +59,27 @@ const projects: Project[] = [
     image: "/images/senna.jpg",
     tag: "Projetos especiais",
   },
+  {
+    id: 7,
+    title: "Stopper de Prateleira",
+    aplication: "Materiais de apoio",
+    image: "/images/senna.jpg",
+    tag: "Projetos especiais",
+  },
+  {
+    id: 8,
+    title: "Stopper de Prateleira",
+    aplication: "Materiais de apoio",
+    image: "/images/senna.jpg",
+    tag: "Projetos especiais",
+  },
+  {
+    id: 9,
+    title: "Stopper de Prateleira",
+    aplication: "Materiais de apoio",
+    image: "/images/senna.jpg",
+    tag: "Projetos especiais",
+  },
 ];
 
 const categories = ["Todos", "OOH", "PDV", "Projetos especiais", "Linha ECO"];

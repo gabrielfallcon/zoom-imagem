@@ -6,6 +6,9 @@ export const PortfolioComponent = () => {
   return (
     <div className={styles.portfolioWrapper}>
       <ContentTag>
+        
+      </ContentTag>
+      <ContentTag colorTopPosition="right">
         <Projects />
       </ContentTag>
     </div>
