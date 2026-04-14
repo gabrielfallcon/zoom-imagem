@@ -1,10 +1,5 @@
 @use "@/styles/mixins.scss" as *;
 
-$pink: #ee0874;
-$yellow: #ffd200;
-$bg: #0d101b;
-$border: #c4c4c4;
-
 .projects {
   background: $bg;
   position: relative;
@@ -67,7 +62,7 @@ $border: #c4c4c4;
 
 .projects__filterBtn {
   background: transparent;
-  border: 1px solid rgba($border, 0.15);
+  border: 1px solid rgba($ice, 0.15);
   color: rgba(#fff, 0.45);
   border-radius: 100px;
   padding: 6px 18px;
@@ -132,7 +127,7 @@ $border: #c4c4c4;
   border-radius: 16px;
   overflow: hidden;
   background: rgba(#fff, 0.03);
-  border: 1px solid rgba($border, 0.1);
+  border: 1px solid rgba($ice, 0.1);
   transition:
     border-color 0.3s,
     transform 0.3s;
@@ -281,7 +276,7 @@ $border: #c4c4c4;
   gap: 1.25rem;
   margin-top: 4rem;
   padding-top: 3rem;
-  border-top: 1px solid rgba($border, 0.1);
+  border-top: 1px solid rgba($ice, 0.1);
 
   @include respond-to("m") {
     flex-direction: row;
@@ -349,7 +344,7 @@ $border: #c4c4c4;
 .modal__content {
   position: relative;
   background: #13172a;
-  border: 1px solid rgba($border, 0.12);
+  border: 1px solid rgba($ice, 0.12);
   border-radius: 20px;
   overflow: hidden;
   width: 100%;

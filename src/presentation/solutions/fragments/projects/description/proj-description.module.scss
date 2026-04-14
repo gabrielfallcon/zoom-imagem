@@ -45,14 +45,14 @@ $bp-lg: 1024px;
   p {
     font-size: 20px;
     line-height: 1.75;
-    color: #c4c4c4;
+    color: $ice;
     margin-bottom: 12px;
   }
 
   h3 {
     font-size: 16px;
     font-weight: 600;
-    color: #ee0874;
+    color: $pink;
     margin-bottom: 0.5rem;
   }
 }
@@ -76,7 +76,7 @@ $bp-lg: 1024px;
     color: #fff;
   }
   p {
-    color: #c4c4c4;
+    color: $ice;
   }
 }
 
@@ -149,7 +149,7 @@ $bp-lg: 1024px;
 
   p {
     font-size: 0.875rem;
-    color: #c4c4c4;
+    color: $ice;
   }
 }
 
@@ -240,8 +240,8 @@ $bp-lg: 1024px;
 }
 
 .cityTag:hover {
-  background: #ee0874;
-  border-color: #ee0874;
+  background: $pink;
+  border-color: $pink;
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(238, 8, 116,0.35);

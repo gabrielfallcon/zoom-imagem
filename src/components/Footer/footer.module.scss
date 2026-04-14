@@ -50,7 +50,7 @@
       font-weight: 400;
       line-height: 120%;
       text-align: center;
-      color: #c4c4c4;
+      color: $ice;
 
       @include respond-to("l") {
         font-size: 16px;
@@ -129,7 +129,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(225deg, #ee0874 0%, #ff3a96 100%);
+      background: linear-gradient(225deg, $pink 0%, #ff3a96 100%);
       border-radius: 4px;
     }
 

@@ -8,7 +8,7 @@
   text-align: left;
 
   span {
-    color: #c4c4c4;
+    color: $ice;
     font-size: 14px;
     letter-spacing: 0.01em;
     font-weight: 500;
@@ -81,7 +81,7 @@
     left: 0;
     right: 0;
     height: 20px;
-    background-color: #0d101b;
+    background-color: $bg;
   }
 
   li {
@@ -101,7 +101,7 @@
       font-size: 20px;
       font-weight: 400;
       line-height: 28px;
-      color: #c4c4c4;
+      color: $ice;
     }
   }
 }
@@ -142,7 +142,7 @@
       line-height: 22.4px;
       letter-spacing: 0.1em;
       margin-bottom: 8px;
-      color: #c4c4c4;
+      color: $ice;
       text-transform: uppercase;
 
       @include respond-to("l") {
@@ -164,7 +164,7 @@
       }
 
       strong {
-        color: #ee0874;
+        color: $pink;
         font-weight: 600;
       }
     }
@@ -173,7 +173,7 @@
       font-size: 16px;
       font-weight: 300;
       line-height: 28px;
-      color: #c4c4c4;
+      color: $ice;
       margin-bottom: 24px;
 
       @include respond-to("l") {
@@ -182,7 +182,7 @@
       }
 
       strong {
-        color: #ee0874;
+        color: $pink;
         font-weight: 700;
       }
     }
@@ -220,7 +220,7 @@
   flex-direction: column;
 
   span {
-    color: #c4c4c4;
+    color: $ice;
     font-size: 14px;
     letter-spacing: 0.01em;
     font-weight: 500;
@@ -255,7 +255,7 @@
 }
 
 .ourClients {
-  color: #c4c4c4;
+  color: $ice;
   font-size: 14px;
   letter-spacing: 0.01em;
   font-weight: 500;
@@ -337,7 +337,7 @@
   display: flex;
   padding: 48px 24px;
   border-radius: 20px;
-  background: linear-gradient(210deg, #fed207 20%, #ee0874);
+  background: linear-gradient(210deg, #fed207 20%, $pink);
   gap: 64px;
   flex-direction: column;
 

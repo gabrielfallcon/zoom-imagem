@@ -13,7 +13,7 @@
   }
 
   span {
-    color: #c4c4c4;
+    color: $ice;
     font-size: 14px;
     letter-spacing: 0.01em;
     font-weight: 500;
@@ -166,7 +166,7 @@
 }
 
 .step:hover .iconWrapper {
-  border-color: #ffd200;
+  border-color: $yellow;
   transform: scale(1.05);
 }
 
@@ -191,7 +191,7 @@
   display: flex;
   padding: 48px 24px;
   border-radius: 20px;
-  background: linear-gradient(210deg, #fed207 20%, #ee0874);
+  background: linear-gradient(210deg, #fed207 20%, $pink);
   gap: 64px;
   flex-direction: column;
 
@@ -248,7 +248,7 @@
       font-size: 24px;
       font-weight: 400;
       line-height: 33.6px;
-      color: #0d101b;
+      color: $bg;
 
       strong {
         font-weight: 700;
@@ -282,7 +282,7 @@
   right: 0;
   background: conic-gradient(
     from 112.35deg at 50% 50%,
-    #ee0874 0deg,
+    $pink 0deg,
     #f84b9c 360deg
   );
 }

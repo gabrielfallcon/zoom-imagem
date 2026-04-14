@@ -34,7 +34,7 @@
       line-height: 22.4px;
       letter-spacing: 0.1em;
       margin-bottom: 8px;
-      color: #c4c4c4;
+      color: $ice;
       text-transform: uppercase;
 
       @include respond-to("l") {
@@ -56,7 +56,7 @@
       }
 
       strong {
-        color: #ee0874;
+        color: $pink;
         font-weight: 600;
       }
     }
@@ -65,7 +65,7 @@
       font-size: 16px;
       font-weight: 300;
       line-height: 28px;
-      color: #c4c4c4;
+      color: $ice;
       margin-bottom: 24px;
 
       @include respond-to("l") {
@@ -74,7 +74,7 @@
       }
 
       strong {
-        color: #ee0874;
+        color: $pink;
         font-weight: 700;
       }
     }
@@ -174,7 +174,7 @@
 .subititles {
   text-align: center;
   margin: 0 auto;
-  color: #c4c4c4;
+  color: $ice;
   font-size: 24px;
   letter-spacing: 0.01em;
   font-weight: 500;
@@ -196,7 +196,7 @@
 }
 
 .bubleColor {
-  background: #ee0874;
+  background: $pink;
 }
 
 .tools {
@@ -304,7 +304,7 @@
 
 .titleDifferentials {
   text-align: left;
-  color: #c4c4c4;
+  color: $ice;
   font-size: 24px;
   letter-spacing: 0.01em;
   font-weight: 500;
@@ -327,7 +327,7 @@
   width: 42px;
   height: 42px;
   border-radius: 8px;
-  background-color: #ee0874;
+  background-color: $pink;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -338,7 +338,7 @@
   h3 {
     font-size: 18px;
     font-weight: 600;
-    color: #c4c4c4;
+    color: $ice;
   }
 
   p {
@@ -391,7 +391,7 @@
   p {
     line-height: 140%;
     font-size: 18px;
-    color: #c4c4c4;
+    color: $ice;
     margin: 16px 0;
 
     @include respond-to("l") {
@@ -421,7 +421,7 @@
   display: flex;
   padding: 48px 24px;
   border-radius: 20px;
-  background: linear-gradient(210deg, #fed207 20%, #ee0874);
+  background: linear-gradient(210deg, #fed207 20%, $pink);
   gap: 64px;
   flex-direction: column;
 
@@ -478,7 +478,7 @@
       font-size: 24px;
       font-weight: 400;
       line-height: 33.6px;
-      color: #0d101b;
+      color: $bg;
 
       strong {
         font-weight: 700;

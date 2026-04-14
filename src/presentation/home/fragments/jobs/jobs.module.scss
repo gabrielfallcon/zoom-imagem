@@ -13,7 +13,7 @@
   }
 
   span {
-    color: #c4c4c4;
+    color: $ice;
     font-size: 14px;
     letter-spacing: 0.01em;
     font-weight: 500;
@@ -96,8 +96,8 @@
     top: 0;
     bottom: 0;
     background:
-      linear-gradient(180deg, #ee0874 0%, rgba(0, 255, 196, 0) 73.08%),
-      linear-gradient(180deg, #ee0874 0%, rgba(0, 255, 196, 0) 45.25%);
+      linear-gradient(180deg, $pink 0%, rgba(0, 255, 196, 0) 73.08%),
+      linear-gradient(180deg, $pink 0%, rgba(0, 255, 196, 0) 45.25%);
     border-radius: 50px;
   }
 }
@@ -115,8 +115,8 @@
   width: 2px;
   height: 350px;
   background:
-    linear-gradient(180deg, #ee0874 0%, rgba(0, 255, 196, 0) 73.08%),
-    linear-gradient(180deg, #ee0874 0%, rgba(0, 255, 196, 0) 45.25%);
+    linear-gradient(180deg, $pink 0%, rgba(0, 255, 196, 0) 73.08%),
+    linear-gradient(180deg, $pink 0%, rgba(0, 255, 196, 0) 45.25%);
   border-radius: 50px;
 }
 
@@ -192,7 +192,7 @@
     font-weight: 400;
     line-height: 150%;
     text-align: left;
-    color: #c4c4c4;
+    color: $ice;
 
     @include respond-to("l") {
       font-size: 24px;
