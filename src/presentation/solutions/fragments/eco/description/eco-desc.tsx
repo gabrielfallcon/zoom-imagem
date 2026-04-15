@@ -3,7 +3,7 @@
 import { ButtonTag } from "@/components";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { FiArrowRight, FiCheckCircle } from "react-icons/fi";
+import { FiArrowRight, FiCheck, FiCheckCircle } from "react-icons/fi";
 import { Recycle, Package, Leaf, Zap } from "lucide-react";
 import styles from "./eco-desc.module.scss";
 import { useRef, useState, useEffect } from "react";
@@ -277,19 +277,7 @@ export const EcoDescription = () => {
             {/* Floating badge */}
             <div className={styles.ctaBadge}>
               <div className={styles.ctaBadgeIcon}>
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-                  <polyline points="22 4 12 14.01 9 11.01" />
-                </svg>
+               <FiCheck />
               </div>
               <div>
                 <p className={styles.ctaBadgeTitle}>+500 projetos</p>

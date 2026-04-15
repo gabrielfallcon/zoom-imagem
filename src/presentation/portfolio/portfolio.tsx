@@ -1,13 +1,12 @@
 import { ContentTag } from "@/components";
-import styles from "./portfolio.module.scss";
 import { Projects } from "@/components/projects";
+import { PortfolofioHall } from "./fragments/hall";
+import styles from "./portfolio.module.scss";
 
 export const PortfolioComponent = () => {
   return (
     <div className={styles.portfolioWrapper}>
-      <ContentTag>
-        
-      </ContentTag>
+         <PortfolofioHall />
       <ContentTag colorTopPosition="right">
         <Projects tag="Todos" />
       </ContentTag>
