@@ -17,26 +17,26 @@ export const EcoHall = () => {
     <>
       {/* Hero */}
       <section className={styles.hero}>
-        <div className={styles.hero__bg}>
+        <div className={styles.heroBg}>
           <Image
             src="/images/senna.jpg"
             alt="Publicidade sustentável"
             fill
-            className={styles.hero__bgImg}
+            className={styles.heroBgImg}
             priority
             sizes="100vw"
           />
-          <div className={styles.hero__overlay} />
+          <div className={styles.heroOverlay} />
         </div>
-        <div className={styles.hero__content}>
-          <h1 className={styles.hero__title}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>
             Materiais sustentáveis para publicidade e comunicação visual
           </h1>
-          <p className={styles.hero__subtitle}>
+          <p className={styles.heroSubtitle}>
             Soluções que reduzem impacto ambiental sem abrir mão da qualidade,
             da execução e da presença da sua marca.
           </p>
-          <div className={styles.hero__actions}>
+          <div className={styles.heroActions}>
             <ButtonTag
               label="Falar com a Zoom"
               size="lg"

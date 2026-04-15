@@ -10,18 +10,18 @@
   }
 }
 
-.projects__container {
+.projectsContainer {
   max-width: 1200px;
   margin: 0 auto;
 }
 
 // Header
-.projects__header {
+.projectsHeader {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.projects__eyebrow {
+.projectsEyebrow {
   display: inline-block;
   font-size: 0.78rem;
   font-weight: 500;
@@ -31,7 +31,7 @@
   margin-bottom: 1rem;
 }
 
-.projects__title {
+.projectsTitle {
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   font-weight: 700;
   color: #fff;
@@ -40,11 +40,11 @@
   margin-bottom: 1rem;
 }
 
-.projects__highlight {
+.projectsHighlight {
   color: $yellow;
 }
 
-.projects__subtitle {
+.projectsSubtitle {
   font-size: 1rem;
   color: rgba(#fff, 0.45);
   line-height: 1.7;
@@ -53,7 +53,7 @@
 }
 
 // Filters
-.projects__filters {
+.projectsFilters {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -61,7 +61,7 @@
   margin-bottom: 3rem;
 }
 
-.projects__filterBtn {
+.projectsFilterBtn {
   background: transparent;
   border: 1px solid rgba($ice, 0.15);
   color: rgba(#fff, 0.45);
@@ -92,7 +92,7 @@
 }
 
 // Grid
-.projects__grid {
+.projectsGrid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
@@ -106,7 +106,7 @@
   }
 
   &--visible {
-    .projects__card {
+    .projectsCard {
       animation: cardIn 0.5s ease both;
     }
   }
@@ -124,7 +124,7 @@
 }
 
 // Card
-.projects__card {
+.projectsCard {
   border-radius: 16px;
   overflow: hidden;
   background: rgba(#fff, 0.03);
@@ -137,31 +137,31 @@
   &:hover {
     transform: translateY(-4px);
 
-    .projects__image {
+    .projectsImage {
       transform: scale(1.06);
     }
 
-    .projects__overlay {
+    .projectsOverlay {
       opacity: 1;
     }
   }
 }
 
 // Image
-.projects__imageWrap {
+.projectsImageWrap {
   position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: rgba(#fff, 0.04);
 }
 
-.projects__image {
+.projectsImage {
   object-fit: cover;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 // Overlay
-.projects__overlay {
+.projectsOverlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -177,7 +177,7 @@
   transition: opacity 0.3s;
 }
 
-.projects__overlayTag {
+.projectsOverlayTag {
   align-self: flex-start;
   background: $pink;
   color: #fff;
@@ -189,25 +189,25 @@
   border-radius: 100px;
 }
 
-.projects__overlayContent {
+.projectsOverlayContent {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.projects__cardTitle {
+.projectsCardTitle {
   font-size: 1.05rem;
   font-weight: 600;
   color: #fff;
   line-height: 1.3;
 }
 
-.projects__cardCategory {
+.projectsCardCategory {
   font-size: 0.8rem;
   color: rgba(#fff, 0.6);
 }
 
-.projects__overlayIcon {
+.projectsOverlayIcon {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -224,7 +224,7 @@
 }
 
 // Card footer (visible without hover)
-.projects__cardFooter {
+.projectsCardFooter {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -236,19 +236,19 @@
   }
 }
 
-.projects__cardFooterTitle {
+.projectsCardFooterTitle {
   font-size: 0.9rem;
   font-weight: 600;
   color: rgba(#fff, 0.85);
   margin-bottom: 2px;
 }
 
-.projects__cardFooterCat {
+.projectsCardFooterCat {
   font-size: 0.78rem;
   color: rgba(#fff, 0.35);
 }
 
-.projects__cardTag {
+.projectsCardTag {
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.06em;
@@ -262,7 +262,7 @@
 }
 
 // Empty state
-.projects__empty {
+.projectsEmpty {
   text-align: center;
   padding: 4rem 0;
   color: rgba(#fff, 0.3);
@@ -270,7 +270,7 @@
 }
 
 // Bottom CTA
-.projects__cta {
+.projectsCta {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -285,12 +285,12 @@
   }
 }
 
-.projects__ctaText {
+.projectsCtaText {
   font-size: 1rem;
   color: rgba(#fff, 0.5);
 }
 
-.projects__ctaBtn {
+.projectsCtaBtn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -342,7 +342,7 @@
   }
 }
 
-.modal__content {
+.modalContent {
   position: relative;
   background: #13172a;
   border: 1px solid rgba($ice, 0.12);
@@ -372,7 +372,7 @@
   }
 }
 
-.modal__close {
+.modalClose {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -396,7 +396,7 @@
   }
 }
 
-.modal__imageWrap {
+.modalImageWrap {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -410,11 +410,11 @@
   }
 }
 
-.modal__image {
+.modalImage {
   object-fit: cover;
 }
 
-.modal__tag {
+.modalTag {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
@@ -428,7 +428,7 @@
   border-radius: 100px;
 }
 
-.modal__body {
+.modalBody {
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
@@ -441,14 +441,14 @@
   }
 }
 
-.modal__title {
+.modalTitle {
   font-size: 1.4rem;
   font-weight: 700;
   color: #fff;
   line-height: 1.25;
 }
 
-.modal__category {
+.modalCategory {
   font-size: 0.82rem;
   font-weight: 500;
   color: $yellow;
@@ -457,7 +457,7 @@
   margin-bottom: 0.5rem;
 }
 
-.modal__description {
+.modalDescription {
   font-size: 0.92rem;
   color: rgba(#fff, 0.55);
   line-height: 1.7;

@@ -15,28 +15,28 @@ export default function PdvHall() {
   return (
     <section className={styles.heroSectionContainer}>
       <div className={styles.heroContainer}>
-        <div className={styles.hero__left}>
-          <h1 className={styles.hero__title}>
+        <div className={styles.heroLeft}>
+          <h1 className={styles.heroTitle}>
             Sua marca precisa estar presente no ponto de venda.
           </h1>
-          <p className={styles.hero__text}>
+          <p className={styles.heroText}>
             Materiais de PDV bem executados destacam produtos, reforçam a marca
             e influenciam diretamente a decisão de compra.
           </p>
-          <p className={styles.hero__text}>
+          <p className={styles.heroText}>
             A Zoom atua na produção de displays, totens, wobblers, faixas e
             estruturas promocionais, garantindo qualidade, padronização e
             impacto em escala.
           </p>
         </div>
 
-        <div className={styles.hero__right}>
-          <div className={styles.hero__imgWrap}>
+        <div className={styles.heroRight}>
+          <div className={styles.heroImgWrap}>
             <Image
               src="/images/senna.jpg"
               alt="Materiais de PDV"
               fill
-              className={styles.hero__img}
+              className={styles.heroImg}
               priority
               sizes="(max-width: 768px) 100vw, 50vw"
             />

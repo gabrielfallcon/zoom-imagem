@@ -237,46 +237,46 @@ export const EcoDescription = () => {
       {/* CTA      */}
       <section className={styles.sectionModal} ref={sectionRef}>
         <div
-          className={`${styles.cta__container} ${inView ? styles["cta__container--visible"] : ""}`}
+          className={`${styles.ctaContainer} ${inView ? styles["ctaContainer--visible"] : ""}`}
         >
-          <div className={styles.cta__mosaic}>
+          <div className={styles.ctaMosaic}>
             <div
-              className={`${styles.cta__imgWrap} ${styles["cta__imgWrap--top"]}`}
+              className={`${styles.ctaImgWrap} ${styles["ctaImgWrap--top"]}`}
             >
               <Image
                 src={images[0]}
                 alt="Equipe Zoom PDV"
                 fill
-                className={styles.cta__img}
+                className={styles.ctaImg}
                 sizes="(max-width: 768px) 100vw, 300px"
               />
             </div>
             <div
-              className={`${styles.cta__imgWrap} ${styles["cta__imgWrap--bottom-left"]}`}
+              className={`${styles.ctaImgWrap} ${styles["ctaImgWrap--bottom-left"]}`}
             >
               <Image
                 src={images[1]}
                 alt="Material de PDV"
                 fill
-                className={styles.cta__img}
+                className={styles.ctaImg}
                 sizes="(max-width: 768px) 100vw, 200px"
               />
             </div>
             <div
-              className={`${styles.cta__imgWrap} ${styles["cta__imgWrap--bottom-right"]}`}
+              className={`${styles.ctaImgWrap} ${styles["ctaImgWrap--bottom-right"]}`}
             >
               <Image
                 src={images[2]}
                 alt="Produção PDV"
                 fill
-                className={styles.cta__img}
+                className={styles.ctaImg}
                 sizes="(max-width: 768px) 100vw, 200px"
               />
             </div>
 
             {/* Floating badge */}
-            <div className={styles.cta__badge}>
-              <div className={styles.cta__badgeIcon}>
+            <div className={styles.ctaBadge}>
+              <div className={styles.ctaBadgeIcon}>
                 <svg
                   width="18"
                   height="18"
@@ -292,31 +292,31 @@ export const EcoDescription = () => {
                 </svg>
               </div>
               <div>
-                <p className={styles.cta__badgeTitle}>+500 projetos</p>
-                <p className={styles.cta__badgeSub}>entregues com sucesso</p>
+                <p className={styles.ctaBadgeTitle}>+500 projetos</p>
+                <p className={styles.ctaBadgeSub}>entregues com sucesso</p>
               </div>
             </div>
           </div>
 
-          <div className={styles.cta__content}>
-            <h2 className={styles.cta__title}>
+          <div className={styles.ctaContent}>
+            <h2 className={styles.ctaTitle}>
               Sustentabilidade também é parte da presença da sua marca
             </h2>
 
-            <p className={styles.cta__text}>
+            <p className={styles.ctaText}>
               Fale com a Zoom e desenvolva campanhas com menor impacto e alta
               qualidade de execução.
             </p>
 
-            <div className={styles.cta__features}>
+            <div className={styles.ctaFeatures}>
               {[
                 "Produção em escala",
                 "Padronização garantida",
                 "Logística integrada",
                 "Suporte especializado",
               ].map((feat) => (
-                <div key={feat} className={styles.cta__feature}>
-                  <span className={styles.cta__featureIcon}>
+                <div key={feat} className={styles.ctaFeature}>
+                  <span className={styles.ctaFeatureIcon}>
                     <FiCheckCircle />
                   </span>
                   {feat}
@@ -324,7 +324,7 @@ export const EcoDescription = () => {
               ))}
             </div>
 
-            <div className={styles.cta__actions}>
+            <div className={styles.ctaActions}>
               <ButtonTag
                 label="Falar com a Zoom"
                 size="sm"

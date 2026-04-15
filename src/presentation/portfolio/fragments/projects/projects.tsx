@@ -132,23 +132,23 @@ export default function Projects() {
   return (
     <>
       <section className={styles.projects} ref={sectionRef}>
-        <div className={styles.projects__container}>
-          <div className={styles.projects__header}>
-            <span className={styles.projects__eyebrow}>Nosso portfólio</span>
-            <h2 className={styles.projects__title}>
+        <div className={styles.projectsContainer}>
+          <div className={styles.projectsHeader}>
+            <span className={styles.projectsEyebrow}>Nosso portfólio</span>
+            <h2 className={styles.projectsTitle}>
               Confira alguns dos nossos trabalhos
             </h2>
-            <p className={styles.projects__subtitle}>
+            <p className={styles.projectsSubtitle}>
               Conheça alguns dos projetos desenvolvidos pela nossa equipe para
               diferentes marcas e campanhas.
             </p>
           </div>
 
-          <div className={styles.projects__filters}>
+          <div className={styles.projectsFilters}>
             {categories.map((cat) => (
               <button
                 key={cat}
-                className={`${styles.projects__filterBtn} ${activeFilter === cat ? styles["projects__filterBtn--active"] : ""}`}
+                className={`${styles.projectsFilterBtn} ${activeFilter === cat ? styles["projectsFilterBtn--active"] : ""}`}
                 onClick={() => setActiveFilter(cat)}
               >
                 {cat}
@@ -157,52 +157,52 @@ export default function Projects() {
           </div>
 
           <div
-            className={`${styles.projects__grid} ${inView ? styles["projects__grid--visible"] : ""}`}
+            className={`${styles.projectsGrid} ${inView ? styles["projectsGrid--visible"] : ""}`}
           >
             {filtered.map((project, i) => (
               <div
                 key={project.id}
-                className={styles.projects__card}
+                className={styles.projectsCard}
                 style={{ animationDelay: `${i * 80}ms` }}
                 onClick={() => setSelectedProject(project)}
                 aria-label={`Expandir projeto ${project.title}`}
               >
-                <div className={styles.projects__imageWrap}>
+                <div className={styles.projectsImageWrap}>
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className={styles.projects__image}
+                    className={styles.projectsImage}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className={styles.projects__overlay}>
-                    <span className={styles.projects__overlayTag}>
+                  <div className={styles.projectsOverlay}>
+                    <span className={styles.projectsOverlayTag}>
                       {project.tag}
                     </span>
-                    <div className={styles.projects__overlayContent}>
-                      <h3 className={styles.projects__cardTitle}>
+                    <div className={styles.projectsOverlayContent}>
+                      <h3 className={styles.projectsCardTitle}>
                         {project.title}
                       </h3>
-                      <p className={styles.projects__cardCategoty}>
+                      <p className={styles.projectsCardCategoty}>
                         {project.aplication}
                       </p>
                     </div>
-                    <button className={styles.projects__overlayIcon}>
+                    <button className={styles.projectsOverlayIcon}>
                       <Expand size={16} />
                     </button>
                   </div>
                 </div>
 
-                <div className={styles.projects__cardFooter}>
+                <div className={styles.projectsCardFooter}>
                   <div>
-                    <h3 className={styles.projects__cardFooterTitle}>
+                    <h3 className={styles.projectsCardFooterTitle}>
                       {project.title}
                     </h3>
-                    <p className={styles.projects__cardFooterCat}>
+                    <p className={styles.projectsCardFooterCat}>
                       {project.aplication}
                     </p>
                   </div>
-                  <span className={styles.projects__cardTag}>
+                  <span className={styles.projectsCardTag}>
                     {project.tag}
                   </span>
                 </div>
@@ -211,13 +211,13 @@ export default function Projects() {
           </div>
 
           {filtered.length === 0 && (
-            <div className={styles.projects__empty}>
+            <div className={styles.projectsEmpty}>
               <p>Nenhum projeto encontrado para este filtro.</p>
             </div>
           )}
 
-          <div className={styles.projects__cta}>
-            <p className={styles.projects__ctaText}>
+          <div className={styles.projectsCta}>
+            <p className={styles.projectsCtaText}>
               Quer ver mais projetos ou discutir o seu?
             </p>
             <ButtonTag
@@ -240,34 +240,34 @@ export default function Projects() {
           aria-label={selectedProject.title}
         >
           <div
-            className={styles.modal__content}
+            className={styles.modalContent}
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className={styles.modal__close}
+              className={styles.modalClose}
               onClick={() => setSelectedProject(null)}
               aria-label="Fechar modal"
             >
               <X size={20} />
             </button>
 
-            <div className={styles.modal__imageWrap}>
+            <div className={styles.modalImageWrap}>
               <Image
                 src={selectedProject.image}
                 alt={selectedProject.title}
                 fill
-                className={styles.modal__image}
+                className={styles.modalImage}
                 sizes="(max-width: 768px) 100vw, 80vw"
               />
-              <span className={styles.modal__tag}>{selectedProject.tag}</span>
+              <span className={styles.modalTag}>{selectedProject.tag}</span>
             </div>
 
-            <div className={styles.modal__body}>
-              <h3 className={styles.modal__title}>{selectedProject.title}</h3>
-              <p className={styles.modal__category}>
+            <div className={styles.modalBody}>
+              <h3 className={styles.modalTitle}>{selectedProject.title}</h3>
+              <p className={styles.modalCategory}>
                 {selectedProject.aplication}
               </p>
-              <p className={styles.modal__description}>
+              <p className={styles.modalDescription}>
                 Projeto desenvolvido pela equipe Zoom para aplicação em{" "}
                 <strong>{selectedProject.aplication.toLowerCase()}</strong>. Uma
                 solução criativa e impactante que une design, tecnologia e
