@@ -1,6 +1,6 @@
 import { ContentTag } from "@/components";
-import Projects from "./fragments/projects/projects";
 import styles from "./portfolio.module.scss";
+import { Projects } from "@/components/projects";
 
 export const PortfolioComponent = () => {
   return (
@@ -9,7 +9,7 @@ export const PortfolioComponent = () => {
         
       </ContentTag>
       <ContentTag colorTopPosition="right">
-        <Projects />
+        <Projects tag="Todos" />
       </ContentTag>
     </div>
   );

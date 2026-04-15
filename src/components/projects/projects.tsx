@@ -8,6 +8,10 @@ import { useEffect, useRef, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import styles from "./projects.module.scss";
 
+type Props = {
+  tag: string
+}
+
 interface Project {
   id: number;
   title: string;
@@ -84,8 +88,8 @@ const projects: Project[] = [
 
 const categories = ["Todos", "OOH", "PDV", "Projetos especiais", "Linha ECO"];
 
-export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState("Todos");
+export default function Projects({ tag }: Props) {
+  const [activeFilter, setActiveFilter] = useState(tag ?? "Todos");
   const [inView, setInView] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -119,9 +123,9 @@ export default function Projects() {
   }, [selectedProject]);
 
   const filtered =
-    activeFilter === "Todos"
-      ? projects
-      : projects.filter((p) => p.tag === activeFilter);
+  activeFilter === "Todos"
+    ? projects
+    : projects.filter((project) => project.tag === activeFilter);
 
   const router = useRouter();
 

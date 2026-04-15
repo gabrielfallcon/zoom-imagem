@@ -1,6 +1,7 @@
 "use client";
 
 import { ButtonTag } from "@/components";
+import { Projects } from "@/components/projects";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FiArrowRight } from "react-icons/fi";
@@ -106,7 +107,7 @@ export const ProjDescription = () => {
       <section className={styles.sectionModal}>
         <div className={styles.contentWhat}>
           <div className={styles.textBlock}>
-            <h3>O que são projetos especiais</h3>
+          
             <h2>O que são projetos especiais de comunicação?</h2>
             <p>
               Projetos especiais são soluções desenvolvidas sob medida para
@@ -144,7 +145,7 @@ export const ProjDescription = () => {
             />
           </div>
           <div className={styles.textBlock}>
-            <h3>O que a Zoom faz</h3>
+           
             <h2>Do conceito à execução, sem depender de terceiros</h2>
             <p>
               A Zoom desenvolve projetos especiais com foco em viabilidade,
@@ -162,7 +163,7 @@ export const ProjDescription = () => {
       <section className={styles.sectionModal}>
         <div className={styles.contentTypes}>
           <div className={styles.sectionHeader}>
-            <h3>Formatos</h3>
+          
             <h2>Soluções personalizadas para diferentes objetivos</h2>
           </div>
           <div className={styles.cardGrid}>
@@ -181,7 +182,7 @@ export const ProjDescription = () => {
       <section className={styles.sectionModal}>
         <div className={styles.contentHow}>
           <div className={styles.sectionHeader}>
-            <h3>Processo</h3>
+          
             <h2 className={styles.titleLight}>
               Como desenvolvemos projetos especiais
             </h2>
@@ -202,7 +203,7 @@ export const ProjDescription = () => {
       <section className={styles.sectionModal}>
         <div className={styles.contentRange}>
           <div className={styles.sectionHeader}>
-            <h3>Alcance</h3>
+            
             <h2 className={styles.titleLight}>
               Execução de projetos especiais em diferentes regiões
             </h2>
@@ -224,40 +225,8 @@ export const ProjDescription = () => {
 
       {/* Projetos */}
       <section className={styles.sectionModal}>
-        <div className={styles.contentProjects}>
-          <div className={styles.sectionHeader}>
-            <h3>Portfólio</h3>
-            <h2>Projetos especiais executados</h2>
-          </div>
-          <div className={styles.projectsGrid}>
-            {projects.map((p) => (
-              <div key={p.brand} className={styles.projectCard}>
-                <Image
-                  src={p.img}
-                  alt={`Projeto especial – ${p.brand}`}
-                  fill
-                  className={styles.projectImage}
-                />
-                <div className={styles.projectOverlay}>
-                  <p className={styles.projectBrand}>{p.brand}</p>
-                  <p className={styles.projectType}>{p.type}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Projects tag="Projetos especiais"/>
       </section>
-
-      {/* Botão Ver mais */}
-      <div className={styles.btnMore}>
-        <ButtonTag
-          label="Ver mais projetos"
-          size="lg"
-          variant="glass"
-          icon={<FiArrowRight size={24} color="#EE0874" />}
-          onClick={() => handleClick("/portfolio")}
-        />
-      </div>
 
       {/* CTA final */}
       <section className={styles.sectionModal}>

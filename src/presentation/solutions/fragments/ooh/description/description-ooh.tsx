@@ -1,6 +1,7 @@
 "use client";
 
 import { ButtonTag } from "@/components";
+import { Projects } from "@/components/projects";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FiArrowRight } from "react-icons/fi";
@@ -100,7 +101,7 @@ export const OohDescription = () => {
       <section className={styles.sectionModal}>
         <div className={styles.contentWhat}>
           <div className={styles.textBlock}>
-            <h3>Conceito</h3>
+           
             <h2>O que é OOH (Out of Home)?</h2>
             <p>
               OOH (Out of Home) é toda forma de publicidade realizada fora de
@@ -138,7 +139,7 @@ export const OohDescription = () => {
             />
           </div>
           <div className={styles.textBlock}>
-            <h3>O que a zoom faz</h3>
+          
             <h2>Execução completa de campanhas de OOH</h2>
             <p>
               A Zoom atua na produção e execução de projetos de OOH, garantindo
@@ -157,7 +158,6 @@ export const OohDescription = () => {
       <section className={styles.sectionModal}>
         <div className={styles.contentTypes}>
           <div className={styles.sectionHeader}>
-            <h3>Formatos</h3>
             <h2>Soluções em mídia exterior</h2>
           </div>
           <div className={styles.cardGrid}>
@@ -176,7 +176,6 @@ export const OohDescription = () => {
       <section  className={styles.sectionModal}>
         <div className={styles.contentHow}>
           <div className={styles.sectionHeader}>
-            <h3>Processo</h3>
             <h2 className={styles.titleLight}>
               Como funciona a execução de OOH
             </h2>
@@ -196,7 +195,6 @@ export const OohDescription = () => {
        <section className={styles.sectionModal}>
         <div className={styles.contentRange}>
           <div className={styles.sectionHeader}>
-            <h3>Alcance</h3>
             <h2 className={styles.titleLight}>Execução de OOH em todo o Brasil</h2>
             <p>
               Atendemos projetos em diferentes regiões do Brasil, garantindo
@@ -220,61 +218,18 @@ export const OohDescription = () => {
 
       {/* Projetos */}
       <section className={styles.sectionModal}>
-        <div className={styles.contentProjects}>
-          <div className={styles.sectionHeader}>
-            <h3>Portfólio</h3>
-            <h2>Projetos de OOH executados</h2>
-          </div>
-          <div className={styles.projectsGrid}>
-            {projects.map((p) => (
-              <div key={p.brand} className={styles.projectCard}>
-                <Image
-                  src={p.img}
-                  alt={`Projeto OOH – ${p.brand}`}
-                  fill
-                  className={styles.projectImage}
-                />
-                <div className={styles.projectOverlay}>
-                  <p className={styles.projectBrand}>{p.brand}</p>
-                  <p className={styles.projectType}>{p.type}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Projects tag="OOH"/>
       </section>
 
-      {/* CTA Final */}
-      {/* <section id="contato" className={styles.sectionCta}>
-        <div className={styles.ctaInner}>
-          <SectionLabel>Vamos trabalhar juntos</SectionLabel>
-          <h2>
-            Sua marca precisa estar nas ruas —{" "}
-            <span className={styles.heroHighlight}>do jeito certo.</span>
-          </h2>
-          <p>
-            Fale com uma equipe especializada em produção e execução de OOH e
-            leve sua marca para os principais pontos de visibilidade.
-          </p>
-          <a
-            href="https://wa.me/5511999999999"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.btnPrimary}
-          >
-            Falar com a Zoom
-          </a>
-        </div>
-      </section> */}
       <div className={styles.btnMore}>
-    <ButtonTag 
+        <ButtonTag 
                 label="Ver mais projetos"
                 size="lg"
                 variant="glass"
                 icon={<FiArrowRight size={24} color="#EE0874" />}
                 onClick={() => handleClick("/portfolio")}
               />
-              </div>
+      </div>
     </>
   );
 };

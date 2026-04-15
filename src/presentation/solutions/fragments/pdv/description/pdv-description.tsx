@@ -1,6 +1,7 @@
 "use client";
 
 import { ButtonTag } from "@/components";
+import { Projects } from "@/components/projects";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FiArrowRight } from "react-icons/fi";
@@ -108,7 +109,6 @@ export const PdvDescription = () => {
       <section className={styles.sectionModal}>
         <div className={styles.contentWhat}>
           <div className={styles.textBlock}>
-            <h3>Conceito</h3>
             <h2>O que são materiais de PDV?</h2>
             <p>
               Materiais de PDV (ponto de venda) são peças utilizadas dentro de
@@ -145,7 +145,6 @@ export const PdvDescription = () => {
             />
           </div>
           <div className={styles.textBlock}>
-            <h3>O que a zoom faz</h3>
             <h2>Produção completa para ponto de venda</h2>
             <p>
               A Zoom atua na produção de materiais promocionais para PDV,
@@ -164,7 +163,6 @@ export const PdvDescription = () => {
       <section className={styles.sectionModal}>
         <div className={styles.contentTypes}>
           <div className={styles.sectionHeader}>
-            <h3>Formatos</h3>
             <h2>Soluções para presença no ponto de venda</h2>
           </div>
           <div className={styles.cardGrid}>
@@ -183,7 +181,6 @@ export const PdvDescription = () => {
       <section className={styles.sectionModal}>
         <div className={styles.contentHow}>
           <div className={styles.sectionHeader}>
-            <h3>Processo</h3>
             <h2 className={styles.titleLight}>
               Como funciona a produção de materiais para PDV
             </h2>
@@ -204,7 +201,6 @@ export const PdvDescription = () => {
       <section className={styles.sectionModal}>
         <div className={styles.contentRange}>
           <div className={styles.sectionHeader}>
-            <h3>Alcance</h3>
             <h2 className={styles.titleLight}>
               Produção e distribuição para PDV em todo o Brasil
             </h2>
@@ -230,28 +226,7 @@ export const PdvDescription = () => {
 
       {/* Projetos */}
       <section className={styles.sectionModal}>
-        <div className={styles.contentProjects}>
-          <div className={styles.sectionHeader}>
-            <h3>Portfólio</h3>
-            <h2>Materiais de PDV produzidos</h2>
-          </div>
-          <div className={styles.projectsGrid}>
-            {projects.map((p) => (
-              <div key={p.brand} className={styles.projectCard}>
-                <Image
-                  src={p.img}
-                  alt={`Projeto PDV – ${p.brand}`}
-                  fill
-                  className={styles.projectImage}
-                />
-                <div className={styles.projectOverlay}>
-                  <p className={styles.projectBrand}>{p.brand}</p>
-                  <p className={styles.projectType}>{p.type}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Projects tag="PDV" />
       </section>
 
       {/* Botão Ver mais */}
