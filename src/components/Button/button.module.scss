@@ -25,8 +25,12 @@
   }
 }
 .primary {
-  background: linear-gradient(225deg, #77ff00 0%, #ccff66 100%);
-  color: #0c1132;
+  background: linear-gradient(225deg, #fdd200  0%, $pink 75%);
+  color: #000;
+
+  &:hover {
+    border: 3px solid $pink;
+  }
 }
 
 .ecoglass {
@@ -36,7 +40,7 @@
   &:hover {
     background: linear-gradient(225deg, #3e5f44 20%, #111d13 80%);
     color: #e5e6fa;
-  }
+  } 
 }
 
 .secondary {

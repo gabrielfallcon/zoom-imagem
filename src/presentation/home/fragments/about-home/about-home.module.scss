@@ -13,17 +13,17 @@
     letter-spacing: 0.01em;
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 
     @include respond-to("l") {
       font-size: 16px;
-      margin-bottom: 16px;
+      margin-bottom: 24px;
     }
   }
 
   h2 {
     width: 100%;
-    // max-width: 925px;
+    // max-width: 925 px;
     font-weight: 400;
     font-size: 32px;
     line-height: 110%;
@@ -74,7 +74,7 @@
   align-items: flex-start;
   padding: 40px 32px;
   gap: 40px;
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
   border: 1px solid rgba(196, 196, 196, 0.1);
   border-radius: 16px;
   position: relative;
@@ -114,6 +114,35 @@
       font-weight: 400;
       line-height: 28px;
       color: $ice;
+    }
+  }
+}
+
+.ctaSkills {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 100px;
+  gap: 32px;
+
+  button{
+    cursor: pointer;
+    border: none;
+    max-width:  327px;
+    font-size: 18px;
+    background: transparent;
+    color: $ice;
+
+    &:hover {
+      color: $pink;
+      transform: scale(1.2);
+    }
+
+    
+
+    @include respond-to("l") {
+      max-width: 268px;
+      margin: none;
     }
   }
 }

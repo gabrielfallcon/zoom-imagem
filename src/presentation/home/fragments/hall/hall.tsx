@@ -1,8 +1,8 @@
 import { FiArrowDown } from "react-icons/fi";
 
-import styles from "./hall.module.scss";
 import { ButtonTag, CenterTag } from "@/components";
 import { useRouter } from "next/navigation";
+import styles from "./hall.module.scss";
 
 const HallComponent = () => {
   const handleScroll = () => {
@@ -36,14 +36,14 @@ const HallComponent = () => {
           <ButtonTag
             label="Falar com a Zoom"
             size="lg"
-            variant="glass"
+            variant="primary"
             onClick={() => handleClick("/contato")}
           />
 
           <ButtonTag
             label="Ver projetos"
             size="lg"
-            variant="glass"
+            variant="primary"
             onClick={() => handleClick("/portfolio")}
           />
         </div>

@@ -7,10 +7,29 @@
   align-items: flex-start;
   text-align: left;
   padding-bottom: 30px;
-
+  
   @include respond-to("l") {
     margin-top: 100px;
   }
+}
+
+
+
+.hallVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hallOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .hallTitle {
@@ -152,12 +171,12 @@
   align-items: center;
   justify-content: center;
   border-radius: 99px;
-  background: #fed207;
+  background: $pink;
   align-self: center;
   align-self: flex-end;
   box-shadow:
-    0 -5px 99px rgba(254, 210, 7, 1),
-    0 -8px 109px rgba(254, 210, 7, 1);
+    0 -5px 99px $pink,
+    0 -8px 109px $pink;
 
   @include respond-to("l") {
     margin-left: 86px;

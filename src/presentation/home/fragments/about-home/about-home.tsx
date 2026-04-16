@@ -13,8 +13,8 @@ import {
   LuWrench,
 } from "react-icons/lu";
 
-import styles from "./about-home.module.scss";
 import { ButtonTag, CarouselTag, ContentTag } from "@/components";
+import styles from "./about-home.module.scss";
 
 const AboutHomeComponent = () => {
   const router = useRouter();
@@ -37,6 +37,7 @@ const AboutHomeComponent = () => {
             </strong>
           </h2>
         </div>
+
         <ul className={styles.contentSkills}>
           <li>
             <FiSettings size={32} color="#ED0874" className={styles.icons}/>
@@ -77,6 +78,18 @@ const AboutHomeComponent = () => {
             </p>
           </li>
         </ul>
+
+        <div className={styles.ctaSkills}>
+          <button onClick={() => handleClick("/portfolio")}>
+            Confira nossos projetos
+          </button>
+          <button onClick={() => handleClick("/contato")}>
+            
+            Entre em contato
+             
+          </button>
+        </div>
+
         <h2 className={styles.ourClients}>Nossos clientes</h2>
         <CarouselTag />
         <div className={styles.weResults}>
