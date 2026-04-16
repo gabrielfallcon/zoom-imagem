@@ -4,42 +4,25 @@ import { solucoes } from "@/lib/solucoes/solucoes";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { DropSolutionsMobile } from "./fragments/dropmobile/solutions";
 import styles from "./header.module.scss";
 
 export const HeaderTag = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropOpen, setDropOpen] = useState(false);
   const [solutionsMenu, setSolutionsMenu] = useState(false);
 
   const clickMenuMobile = () => {
     setMenuOpen((prev) => !prev);
   };
 
-    const handleDrop = () => {
-      setDropOpen((prev) => !prev);
-    };
-
   const router = useRouter();
 
   function handleClick(link: string) {
     router.push(link);
     setMenuOpen((prev) => !prev);
-  }
-
-  const dropRef = useRef<HTMLLIElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      if (dropRef.current && !dropRef.current.contains(e.target as Node)) {
-        setDropOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  } 
 
   return (
     <>
@@ -58,11 +41,9 @@ export const HeaderTag = () => {
             </li>
             <li
               className={styles.listMenuLi}
-              ref={dropRef}
-              // onClick={handleDrop}
+              // ref={dropRef}
             >
               Soluções
-              {/* {dropOpen && ( */}
                 <ul className={styles.dropMenu}>
                   {solucoes.map((s) => (
                     <li onClick={() => setMenuOpen(false)} key={s.slug}>
@@ -70,7 +51,6 @@ export const HeaderTag = () => {
                     </li>
                   ))}
                 </ul>
-              {/* )} */}
             </li>
             <li
               className={styles.listMenuLi}

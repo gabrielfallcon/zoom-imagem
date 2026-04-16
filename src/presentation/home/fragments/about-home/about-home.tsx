@@ -39,7 +39,7 @@ const AboutHomeComponent = () => {
         </div>
         <ul className={styles.contentSkills}>
           <li>
-            <FiSettings size={32} color="#ED0874" />
+            <FiSettings size={32} color="#ED0874" className={styles.icons}/>
 
             <h3>Produção própria </h3>
 
@@ -49,7 +49,7 @@ const AboutHomeComponent = () => {
             </p>
           </li>
           <li>
-            <FiMap size={32} color="#ED0874" />
+            <FiMap size={32} color="#ED0874" className={styles.icons}/>
 
             <h3>Cobertura nacional</h3>
 
@@ -59,7 +59,7 @@ const AboutHomeComponent = () => {
             </p>
           </li>
           <li>
-            <FiClock size={32} color="#ED0874" />
+            <FiClock size={32} color="#ED0874" className={styles.icons}/>
 
             <h3>Agilidade na entrega</h3>
 
@@ -68,7 +68,7 @@ const AboutHomeComponent = () => {
             </p>
           </li>
           <li>
-            <FiCheckCircle size={32} color="#ED0874" />
+            <FiCheckCircle size={32} color="#ED0874" className={styles.icons}/>
 
             <h3>Qualidade de ponta a ponta</h3>
 
@@ -94,28 +94,28 @@ const AboutHomeComponent = () => {
         </div>
         <ul className={styles.contentNumberServices}>
           <li>
-            <LuBriefcaseBusiness size={40} color="#EE0874" />
+            <LuBriefcaseBusiness size={40} color="#EE0874" className={styles.icons} />
 
             <span>+2.000</span>
 
             <p>projetos executados</p>
           </li>
           <li>
-            <LuMapPinCheck size={40} color="#EE0874" />
+            <LuMapPinCheck size={40} color="#EE0874" className={styles.icons}/>
 
             <span>+120</span>
 
             <p>cidades atendidas</p>
           </li>
           <li>
-            <LuWrench size={40} color="#EE0874" />
+            <LuWrench size={40} color="#EE0874" className={styles.icons}/>
 
             <span>+15.000</span>
 
             <p>pontos instalados</p>
           </li>
           <li>
-            <LuAward size={40} color="#EE0874" />
+            <LuAward size={40} color="#EE0874" className={styles.icons}/>
 
             <span>+24</span>
 

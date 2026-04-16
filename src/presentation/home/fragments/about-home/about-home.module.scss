@@ -8,7 +8,7 @@
   text-align: left;
 
   span {
-    color: $ice;
+    color: $pink;
     font-size: 14px;
     letter-spacing: 0.01em;
     font-weight: 500;
@@ -43,6 +43,15 @@
     }
   }
 }
+
+.icons:hover{
+  display: inline-flex;
+  transition: transform 0.2s ease; 
+  cursor: pointer;
+  transform: scale(1.2);
+}
+  
+
 
 .subtitleMob {
   @include respond-to("l") {
@@ -85,6 +94,9 @@
   }
 
   li {
+
+    text-align: center;
+    line-height: 1.5rem;
     svg {
       margin-bottom: 32px;
     }

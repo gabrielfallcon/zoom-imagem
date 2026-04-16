@@ -48,23 +48,6 @@ const HallComponent = () => {
           />
         </div>
 
-        {/* <ul className={styles.listServicesDektop}>
-          <li>
-            <CheckboxTag
-              label={
-                <span className={styles.labelCheck}>Falar com a Zoom</span>
-              }
-              onChange={function () {}}
-            />{" "}
-          </li>
-          <li>
-            <CheckboxTag
-              label={<span className={styles.labelCheck}>Ver projetos</span>}
-              onChange={function () {}}
-            />{" "}
-          </li>
-        </ul> */}
-
         <div className={styles.boxInfo}>
           <div className={styles.hallContentDescriptionDesktop}>
             <p>
