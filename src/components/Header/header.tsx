@@ -18,9 +18,9 @@ export const HeaderTag = () => {
     setMenuOpen((prev) => !prev);
   };
 
-  const handleDrop = () => {
-    setDropOpen((prev) => !prev);
-  };
+    const handleDrop = () => {
+      setDropOpen((prev) => !prev);
+    };
 
   const router = useRouter();
 
@@ -59,10 +59,10 @@ export const HeaderTag = () => {
             <li
               className={styles.listMenuLi}
               ref={dropRef}
-              onClick={handleDrop}
+              // onClick={handleDrop}
             >
               Soluções
-              {dropOpen && (
+              {/* {dropOpen && ( */}
                 <ul className={styles.dropMenu}>
                   {solucoes.map((s) => (
                     <li onClick={() => setMenuOpen(false)} key={s.slug}>
@@ -70,7 +70,7 @@ export const HeaderTag = () => {
                     </li>
                   ))}
                 </ul>
-              )}
+              {/* )} */}
             </li>
             <li
               className={styles.listMenuLi}

@@ -84,13 +84,22 @@
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 400;
+
+
 }
+
 
 .listMenu li:hover {
   background: rgba($color: #535353, $alpha: 0.2);
   border-radius: 999px;
   cursor: pointer;
   align-items: center;
+
+  & .dropMenu{
+    opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  }
 }
 
 .headerMobile {
@@ -191,6 +200,10 @@
   min-width: 180px;
   z-index: 99;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 
   li {
     height: 42px;
