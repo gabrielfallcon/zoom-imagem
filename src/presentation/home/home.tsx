@@ -25,13 +25,12 @@ const HomeComponent = () => {
         </video>
 
         <div className={styles.heroOverlay} />
-<HallTag />
+        <HallTag />
       </div>
-      
-          <AboutHomeTag />
-          <JobsTag />
-          <ApplicationsTag />
-          <CasesTag />
+        <AboutHomeTag />
+        <JobsTag />
+        <ApplicationsTag />
+        <CasesTag />
     </div>
   );
 };

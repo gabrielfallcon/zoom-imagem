@@ -148,7 +148,7 @@ const AboutHomeComponent = () => {
             </p>
 
             <ButtonTag
-              className={styles.btnCopy}
+             
               label="Entrar em contato"
               size="lg"
               variant="tertiary"

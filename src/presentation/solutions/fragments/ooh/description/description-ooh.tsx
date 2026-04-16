@@ -55,38 +55,6 @@ const steps = [
 
 const cities = ["São Paulo - SP", "Rio de Janeiro - RJ", "Belo Horizonte - MG", "Fortaleza - CE", "Curitiba - PR"]
 
-const projects = [
-  {
-    brand: "Marca A",
-    type: "Outdoor 14×4",
-    img: "/images/senna.jpg",
-  },
-  {
-    brand: "Marca B",
-    type: "Frontlight",
-    img: "/images/senna.jpg",
-  },
-  {
-    brand: "Marca C",
-    type: "Mobiliário Urbano",
-    img: "/images/senna.jpg",
-  },
-  {
-    brand: "Marca D",
-    type: "Painel Especial",
-    img: "/images/senna.jpg",
-  },
-  {
-    brand: "Marca E",
-    type: "Outdoor 14×4",
-    img: "/images/senna.jpg",
-  },
-  {
-    brand: "Marca F",
-    type: "Projeto Especial",
-    img: "/images/senna.jpg",
-  },
-];
 
 
 export const OohDescription = () => {
