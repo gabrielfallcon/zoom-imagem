@@ -3,16 +3,18 @@
 .contentAplications {
   width: 100%;
   display: flex;
+  flex-wrap : wrap;
   flex: 1;
   justify-content: space-between;
   gap: 16px;
   overflow-x: scroll;
   flex-direction: column;
+  padding: 12px;
+  height: 100%;
 
   @include respond-to("l") {
     overflow: auto;
-    max-width: none;
-    height: 400px;
+    min-width: 260px;
     align-items: center;
     flex-direction: row;
   }
@@ -26,11 +28,10 @@
     justify-content: center;
     border-radius: 20px;
     border: 1px solid #ffffff57;
-    background: #252831;
     text-align: center;
 
     @include respond-to("l") {
-      width: 280px;
+      width: 360px;
       height: 268px;
       padding: 24px;
     }
@@ -104,8 +105,7 @@
 }
 
 .card {
-  width: 160px;
-
+  width: 360px;
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 12px;
   padding: 14px 12px;
