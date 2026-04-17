@@ -17,7 +17,7 @@ export interface IListServices {
 export const listServices: IListServices[] = [
   {
     service: TypeService.Introduction,
-    imgDeskt: "/images/projects/bauducco3.jpg",
+    imgDeskt: "/images/projects/bauducco1.webp",
     imgMobile: "/images/web-mob.png",
     descriptionJob:
       "Desenvolvemos projetos que conectam sua marca com o público nos principais pontos de contato — das ruas ao ponto de venda.",

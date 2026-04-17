@@ -17,6 +17,7 @@
     min-width: 260px;
     align-items: center;
     flex-direction: row;
+    gap: 32px;
   }
 
   li {
@@ -31,9 +32,10 @@
     text-align: center;
 
     @include respond-to("l") {
-      width: 480px;
+      width: 550px;
       height: 368px;
       padding: 24px;
+
     }
 
     svg {

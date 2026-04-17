@@ -1,5 +1,4 @@
 import { ContentTag } from "@/components";
-import Image from "next/image";
 import { IconType } from "react-icons";
 import {
   FiCalendar,
@@ -20,10 +19,10 @@ interface AmbienteItem {
 
 const items: AmbienteItem[] = [
   { icon: FiMap, texto: "Metrôs e trens" , image: "/images/projects/Chevrolet-01.webp" },
-  { icon: FiNavigation, texto: "Túneis e vias urbanas", image:"/images/projects/bauducco3.jpg" },
-  { icon: FiGrid, texto: "Mobiliário urbano" ,image:""},
-  { icon: FiMonitor, texto: "Outdoors e painéis" ,image:""},
-  { icon: FiShoppingBag, texto: "Pontos de venda" ,image:""},
+  { icon: FiNavigation, texto: "Túneis e vias urbanas", image:"/images/projects/bauducco1.webp" },
+  { icon: FiGrid, texto: "Mobiliário urbano" ,image:"/images/projects/intelbras1.webp"},
+  { icon: FiMonitor, texto: "Outdoors e painéis" ,image:"/images/projects/avon1.webp"},
+  { icon: FiShoppingBag, texto: "Pontos de venda" ,image:"/images/projects/shopee1.jpg"},
   { icon: FiCalendar, texto: "Eventos e ativações" ,image:""},
   { icon: FiPackage, texto: "Stands e cenografia" ,image:""},
 ];
