@@ -171,12 +171,12 @@
   align-items: center;
   justify-content: center;
   border-radius: 99px;
-  background: $pink;
+  background: $yellow;
   align-self: center;
   align-self: flex-end;
   box-shadow:
-    0 -5px 99px $pink,
-    0 -8px 109px $pink;
+    0 -5px 99px $yellow,
+    0 -8px 109px $yellow;
 
   @include respond-to("l") {
     margin-left: 86px;

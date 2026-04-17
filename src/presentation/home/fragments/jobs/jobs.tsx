@@ -19,8 +19,6 @@ const JobsComponent = () => {
   return (
     <ContentTag colorTopPosition="left">
       <div className={styles.contentTitle}>
-        {/* <span>o que oferecemos</span> */}
-
         <h2>
           <strong> Soluções completas </strong> em OOH, PDV e produção de
           materiais publicitários

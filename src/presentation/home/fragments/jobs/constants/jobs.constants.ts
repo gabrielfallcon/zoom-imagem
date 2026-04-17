@@ -17,7 +17,7 @@ export interface IListServices {
 export const listServices: IListServices[] = [
   {
     service: TypeService.Introduction,
-    imgDeskt: "/images/intro-home.jpg",
+    imgDeskt: "/images/projects/bauducco3.jpg",
     imgMobile: "/images/web-mob.png",
     descriptionJob:
       "Desenvolvemos projetos que conectam sua marca com o público nos principais pontos de contato — das ruas ao ponto de venda.",
@@ -25,7 +25,7 @@ export const listServices: IListServices[] = [
   },
   {
     service: TypeService.OOH,
-    imgDeskt: "/images/process/ urbano.png",
+    imgDeskt: "/images/process/urbano.png",
     imgMobile: "/images/web-mob.png",
     descriptionJob:
       "Projetos de mídia OOH com produção e instalação de outdoors, painéis, frontlights e outras soluções de publicidade externa.",

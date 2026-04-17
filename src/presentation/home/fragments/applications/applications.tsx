@@ -1,3 +1,6 @@
+import { ContentTag } from "@/components";
+import Image from "next/image";
+import { IconType } from "react-icons";
 import {
   FiCalendar,
   FiGrid,
@@ -8,22 +11,21 @@ import {
   FiShoppingBag,
 } from "react-icons/fi";
 import styles from "./applications.module.scss";
-import { IconType } from "react-icons";
-import { ContentTag } from "@/components";
 
 interface AmbienteItem {
   icon: IconType;
   texto: string;
+  image: string;
 }
 
 const items: AmbienteItem[] = [
-  { icon: FiMap, texto: "Metrôs e trens" },
-  { icon: FiNavigation, texto: "Túneis e vias urbanas" },
-  { icon: FiGrid, texto: "Mobiliário urbano" },
-  { icon: FiMonitor, texto: "Outdoors e painéis" },
-  { icon: FiShoppingBag, texto: "Pontos de venda" },
-  { icon: FiCalendar, texto: "Eventos e ativações" },
-  { icon: FiPackage, texto: "Stands e cenografia" },
+  { icon: FiMap, texto: "Metrôs e trens" , image: "/images/projects/Chevrolet-01.webp" },
+  { icon: FiNavigation, texto: "Túneis e vias urbanas", image:"/images/projects/bauducco3.jpg" },
+  { icon: FiGrid, texto: "Mobiliário urbano" ,image:""},
+  { icon: FiMonitor, texto: "Outdoors e painéis" ,image:""},
+  { icon: FiShoppingBag, texto: "Pontos de venda" ,image:""},
+  { icon: FiCalendar, texto: "Eventos e ativações" ,image:""},
+  { icon: FiPackage, texto: "Stands e cenografia" ,image:""},
 ];
 
 const ApplicationsComponent = () => {
@@ -39,8 +41,9 @@ const ApplicationsComponent = () => {
         </div>
 
         <ul className={styles.contentAplications}>
-          {items.map(({ icon: Icon, texto }) => (
-            <li key={texto} className={styles.card}>
+          {items.map(({ icon: Icon, texto, image }) => (  
+            <li key={texto} className={styles.card} style={{ backgroundImage: `url(${image})`}}>
+              
               <span>
                 <Icon size={24} />
               </span>
