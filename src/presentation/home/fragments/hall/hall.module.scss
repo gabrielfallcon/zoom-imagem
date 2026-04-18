@@ -8,10 +8,16 @@
   height: 100%;
   justify-content: space-between;
 
+  a {
+    display: none;
+  }
   @include respond-to("l") {
     margin-top: 100px;
     text-align: left;
     padding-bottom: 30px;
+    a {
+      display: flex;
+    }
   }
 }
 
@@ -125,7 +131,6 @@
 
 .boxInfo {
   display: flex;
-
   align-items: center;
   align-self: center;
   gap: 8px;
@@ -160,10 +165,10 @@
 
 .contentButtonOvalMobile {
   width: 100%;
-
   display: flex;
   justify-content: center;
   position: relative;
+
   @include respond-to("l") {
     display: none;
   }
