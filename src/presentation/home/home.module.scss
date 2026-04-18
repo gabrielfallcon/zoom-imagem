@@ -9,11 +9,23 @@
   gap: 16px;
 }
 
+.hallWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include respond-to("l") {
+    padding: 0 16px;
+  }
+}
+
 .homeBackground {
   position: relative;
   overflow: hidden;
   width: 100%;
   margin-bottom: 32px;
+  padding: 16px;
 }
 
 .heroVideo {
@@ -25,7 +37,8 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  border-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
 }
 
 .heroOverlay {

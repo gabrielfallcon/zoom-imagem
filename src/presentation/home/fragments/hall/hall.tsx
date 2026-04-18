@@ -15,53 +15,60 @@ const HallComponent = () => {
     router.push(link);
   }
   return (
-    <CenterTag>
-      <div className={styles.hallWrapper}>
-        <h1 className={styles.hallTitle}>
-          Transformamos presença em percepção de marca com projetos de OOH, PDV
-          e ativações em todo o Brasil.
-        </h1>
+    <>
+      <CenterTag>
+        <div className={styles.hallWrapper}>
+          <h1 className={styles.hallTitle}>
+            Transformamos presença em percepção de marca com projetos de OOH,
+            PDV e ativações em todo o Brasil.
+          </h1>
 
-        <h1 className={styles.hallTitleDesktop}>
-          Transformamos presença em percepção de marca com projetos de OOH, PDV
-          e ativações em todo o Brasil. <br />
-        </h1>
+          <h1 className={styles.hallTitleDesktop}>
+            Transformamos presença em percepção de marca com projetos de OOH,
+            PDV e ativações em todo o Brasil. <br />
+          </h1>
 
-        <p className={styles.hallDescriptionMobile}>
-          Planejamos, produzimos e executamos projetos que colocam sua marca no
-          mundo real — com impacto, consistência e controle em cada etapa
-        </p>
+          <p className={styles.hallDescriptionMobile}>
+            Planejamos, produzimos e executamos projetos que colocam sua marca
+            no mundo real — com impacto, consistência e controle em cada etapa
+          </p>
 
-        <div className={styles.ctaButtons}>
-          <ButtonTag
-            label="Falar com a Zoom"
-            size="lg"
-            variant="primary"
-            onClick={() => handleClick("/contato")}
-          />
+          <div className={styles.ctaButtons}>
+            <ButtonTag
+              label="Falar com a Zoom"
+              size="lg"
+              variant="primary"
+              onClick={() => handleClick("/contato")}
+            />
 
-          <ButtonTag
-            label="Ver projetos"
-            size="lg"
-            variant="primary"
-            onClick={() => handleClick("/portfolio")}
-          />
-        </div>
-
-        <div className={styles.boxInfo}>
-          <div className={styles.hallContentDescriptionDesktop}>
-            <p>
-              Planejamos, produzimos e executamos projetos que colocam sua marca
-              no mundo real — com impacto, consistência e controle em cada etapa
-            </p>
+            <ButtonTag
+              label="Ver projetos"
+              size="lg"
+              variant="primary"
+              onClick={() => handleClick("/portfolio")}
+            />
           </div>
 
-          <a onClick={() => handleScroll()} className={styles.buttonDown}>
-            <FiArrowDown size={40} color="#1E1E1E" />
-          </a>
+          <div className={styles.boxInfo}>
+            <div className={styles.hallContentDescriptionDesktop}>
+              <p>
+                Planejamos, produzimos e executamos projetos que colocam sua
+                marca no mundo real — com impacto, consistência e controle em
+                cada etapa
+              </p>
+            </div>
+            <a onClick={() => handleScroll()} className={styles.buttonDown}>
+              <FiArrowDown size={40} color="#1E1E1E" />
+            </a>
+          </div>
         </div>
+      </CenterTag>
+      <div className={styles.contentButtonOvalMobile}>
+        <a onClick={() => handleScroll()} className={styles.buttonDown}>
+          <FiArrowDown size={40} color="#1E1E1E" />
+        </a>
       </div>
-    </CenterTag>
+    </>
   );
 };
 
