@@ -19,42 +19,53 @@ const ContactComponent = () => {
   type DataType = {
     name: string;
     email: string;
+    phone: string;
+    subject: string;
     message: string;
   };
 
-  const [data, setData] = useState<DataType>({
+  const initialData: DataType = {
     name: "",
     email: "",
+    phone: "",
+    subject: "",
     message: "",
-  });
+  };
 
-  const handleChange = (field: string, value: string) => {
+  const [data, setData] = useState<DataType>(initialData);
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
+
+  const handleChange = (field: keyof DataType, value: string) => {
     setData((prev) => ({ ...prev, [field]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setStatus("sending");
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    if (!res.ok) {
-      console.error("Erro ao enviar");
-      return;
+      if (!res.ok) {
+        console.error("Erro ao enviar");
+        setStatus("error");
+        return;
+      }
+
+      setStatus("success");
+      setData(initialData); // só limpa o formulário quando o envio DEU CERTO
+    } catch (err) {
+      console.error("Erro ao enviar:", err);
+      setStatus("error");
     }
-  };
-
-  const handleClear = () => {
-    setData({
-      name: "",
-      email: "",
-      message: "",
-    });
   };
 
   const handleScroll = () => {
@@ -111,6 +122,7 @@ const ContactComponent = () => {
                       placeholder="Informe o nome completo"
                       value={data.name}
                       onChange={(e) => handleChange("name", e.target.value)}
+                      required
                     />
                   </div>
 
@@ -118,10 +130,11 @@ const ContactComponent = () => {
                     <div className={styles.field}>
                       <label>E-mail</label>
                       <input
-                        type="text"
-                        placeholder="Informe o nome completo"
+                        type="email"
+                        placeholder="Informe o e-mail"
                         value={data.email}
                         onChange={(e) => handleChange("email", e.target.value)}
+                        required
                       />
                     </div>
 
@@ -131,6 +144,8 @@ const ContactComponent = () => {
                         type="tel"
                         name="celular"
                         placeholder="Informe um telefone"
+                        value={data.phone}
+                        onChange={(e) => handleChange("phone", e.target.value)}
                       />
                     </div>
                   </div>
@@ -138,7 +153,13 @@ const ContactComponent = () => {
                   <div className={styles.fieldFull}>
                     <label>Assunto</label>
                     <div className={styles.selectWrapper}>
-                      <select name="assunto">
+                      <select
+                        name="assunto"
+                        value={data.subject}
+                        onChange={(e) =>
+                          handleChange("subject", e.target.value)
+                        }
+                      >
                         <option value="" disabled>
                           Selecione um assunto
                         </option>
@@ -159,17 +180,31 @@ const ContactComponent = () => {
                       placeholder="Digite sua mensagem"
                       value={data.message}
                       onChange={(e) => handleChange("message", e.target.value)}
+                      required
                     />
                   </div>
 
+                  {status === "success" && (
+                    <p className={styles.successMessage}>
+                      Mensagem enviada com sucesso!
+                    </p>
+                  )}
+                  {status === "error" && (
+                    <p className={styles.errorMessage}>
+                      Não foi possível enviar. Tente novamente.
+                    </p>
+                  )}
+
                   <div className={styles.submitRow}>
                     <ButtonTag
-                      label="Enviar mensagem "
+                      label={
+                        status === "sending" ? "Enviando..." : "Enviar mensagem"
+                      }
                       size="lg"
                       variant="primary"
                       icon={<FiSend size={24} color="#191919" />}
                       type="submit"
-                      onClick={handleClear}
+                      disabled={status === "sending"}
                     />
                   </div>
                 </div>

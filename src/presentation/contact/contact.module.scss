@@ -166,7 +166,8 @@
 
 .field,
 .fieldFull {
-  input {
+  input,
+  textarea {
     color: #ffffff;
 
     &::placeholder {
