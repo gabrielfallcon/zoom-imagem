@@ -43,6 +43,11 @@ const ContactComponent = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (data.phone && !PHONE_REGEX.test(data.phone)) {
+      setStatus("error");
+      return;
+    }
     setStatus("sending");
 
     try {
@@ -71,6 +76,18 @@ const ContactComponent = () => {
   const handleScroll = () => {
     const next = document.getElementById("role");
     next?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const PHONE_REGEX = /^\(\d{2}\) \d{4,5}-\d{4}$/;
+
+  const formatPhone = (value: string) => {
+    const digits = value.replace(/\D/g, "").slice(0, 11);
+
+    if (digits.length <= 2) return digits.length ? `(${digits}` : "";
+    if (digits.length <= 6) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+    if (digits.length <= 10)
+      return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
+    return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
   };
 
   return (
@@ -143,9 +160,13 @@ const ContactComponent = () => {
                       <input
                         type="tel"
                         name="celular"
-                        placeholder="Informe um telefone"
+                        placeholder="(11) 91234-5678"
                         value={data.phone}
-                        onChange={(e) => handleChange("phone", e.target.value)}
+                        onChange={(e) =>
+                          handleChange("phone", formatPhone(e.target.value))
+                        }
+                        inputMode="numeric"
+                        maxLength={15}
                       />
                     </div>
                   </div>

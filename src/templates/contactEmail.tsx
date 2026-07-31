@@ -2,12 +2,16 @@ export type ContactEmailProps = {
   name: string;
   email: string;
   message: string;
+  phone?: string;
+  subject?: string;
 };
 
 export function ContactEmailTemplate({
   name,
   email,
   message,
+  phone,
+  subject,
 }: ContactEmailProps) {
   return (
     <html>
@@ -84,6 +88,28 @@ export function ContactEmailTemplate({
                       <tr>
                         <td style={value}>{email}</td>
                       </tr>
+
+                      {phone && (
+                        <tr>
+                          <td style={label}>Telefone</td>
+                        </tr>
+                      )}
+                      {phone && (
+                        <tr>
+                          <td style={value}>{phone}</td>
+                        </tr>
+                      )}
+
+                      {subject && (
+                        <tr>
+                          <td style={label}>Assunto</td>
+                        </tr>
+                      )}
+                      {subject && (
+                        <tr>
+                          <td style={value}>{subject}</td>
+                        </tr>
+                      )}
 
                       <tr>
                         <td style={label}>Mensagem</td>
