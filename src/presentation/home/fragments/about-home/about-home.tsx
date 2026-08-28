@@ -14,7 +14,7 @@ import {
 } from "react-icons/lu";
 
 import { ButtonTag, CarouselTag, ContentTag } from "@/components";
-import { AvaliationsTag } from "@/components/avaliations";
+// import { AvaliationsTag } from "@/components/avaliations";
 import styles from "./about-home.module.scss";
 
 const AboutHomeComponent = () => {
@@ -83,11 +83,11 @@ const AboutHomeComponent = () => {
         <h2 className={styles.ourClients}>Nossos clientes</h2>
         <CarouselTag />
 
-                <h2 className={styles.ourClients}>O que nossos clientes dizem</h2>
+        {/* <h2 className={styles.ourClients}>O que nossos clientes dizem</h2>
 
 
 
-        <AvaliationsTag />
+        <AvaliationsTag /> */}
 
         <div className={styles.weResults}>
           <span>Nossos Resultados</span>
@@ -144,7 +144,6 @@ const AboutHomeComponent = () => {
             variant="primary"
             onClick={() => handleClick("/portfolio")}
           />
-         
         </div>
 
         <div className={styles.contentCopy}>
