@@ -1,5 +1,6 @@
 import { FooterTag, HeaderTag } from "@/components";
 import type { Metadata } from "next";
+import Script from "next/script";
 import "../styles/global.scss";
 import { WhatsappTag } from "@/components/whatsapp";
 
@@ -25,6 +26,20 @@ export default function RootLayout({
         />
       </head>
       <body>
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2Z308LDNEZ"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2Z308LDNEZ');
+          `}
+        </Script>
+
         <WhatsappTag />
         <HeaderTag />
 
