@@ -43,7 +43,7 @@ const AboutHomeComponent = () => {
           <li>
             <FiSettings size={32} color="#ED0874" className={styles.icons} />
 
-            <h3>Produção própria </h3>
+            <h3>Produção própria</h3>
 
             <p>
               Controle total na produção de materiais publicitários e projetos
